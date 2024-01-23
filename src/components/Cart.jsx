@@ -1,4 +1,5 @@
-import React from "react";
+
+
 import { UseCartContext } from "../context/CartContext";
 
 const Cart = () => {
@@ -22,6 +23,5 @@ const Cart = () => {
       )}
     </>
   );
-};
 
-export default Cart;
+};

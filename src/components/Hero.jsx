@@ -1,4 +1,4 @@
-import teaImg from "../image/6.jpeg";
+import teaImg from "../assets/hero.jpeg";
 // import logo from "../image/logo.png";
 const Hero = () => {
   return (

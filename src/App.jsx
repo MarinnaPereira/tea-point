@@ -1,4 +1,5 @@
 import "./App.css";
+
 import { Routes, Route } from "react-router-dom";
 import { Header } from "./components/Header";
 import { Homepage } from "./components/Homepage";
@@ -9,9 +10,13 @@ import { ThankYou } from "./components/ThankYou";
 import { NotFound } from "./components/NotFound";
 import { Footer } from "./components/Footer";
 
+import Hero from "./components/Hero";
+
+
 function App() {
   return (
     <>
+
       <Header />
       <Routes>
         <Route path="/" element={<Homepage />} />
@@ -22,6 +27,8 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
+
+
     </>
   );
 }

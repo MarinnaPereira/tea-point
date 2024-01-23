@@ -1,5 +1,3 @@
-import "./App.css";
-
 import { Routes, Route } from "react-router-dom";
 import { Header } from "./components/Header";
 import { Homepage } from "./components/Homepage";
@@ -9,14 +7,11 @@ import { Cart } from "./components/Cart";
 import { ThankYou } from "./components/ThankYou";
 import { NotFound } from "./components/NotFound";
 import { Footer } from "./components/Footer";
-
-import Hero from "./components/Hero";
-
+import "./App.css";
 
 function App() {
   return (
     <>
-
       <Header />
       <Routes>
         <Route path="/" element={<Homepage />} />
@@ -27,8 +22,6 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
-
-
     </>
   );
 }

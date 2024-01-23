@@ -1,17 +1,15 @@
+import { UseCartContext } from "../contexts/CartContext";
 
-
-import { UseCartContext } from "../context/CartContext";
-
-const Cart = () => {
+export const Cart = () => {
   const { productState } = UseCartContext();
-  const { cart } = productState;
+  const cart = productState;
 
   return (
     <>
       {cart.length === 0 ? (
         <div>
           <div>
-            <p>your basket is empty</p>
+            <p>Your basket is empty.</p>
           </div>
           <button>Start Shopping</button>
         </div>
@@ -23,5 +21,4 @@ const Cart = () => {
       )}
     </>
   );
-
 };

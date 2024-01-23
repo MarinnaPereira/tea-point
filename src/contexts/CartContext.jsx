@@ -1,6 +1,6 @@
 import { createContext, useContext, useReducer } from "react";
 
-const CartContext = createContext();
+export const CartContext = createContext();
 
 const productReducer = (state, action) => {
   switch (action.type) {
@@ -13,8 +13,9 @@ const productReducer = (state, action) => {
   }
 };
 
+const initialState = [];
+
 export const CartProvider = ({ children }) => {
-  const initialState = { cart: [] };
   const [productState, dispatchProduct] = useReducer(
     productReducer,
     initialState
@@ -27,6 +28,7 @@ export const CartProvider = ({ children }) => {
   const removeProduct = (id) => {
     dispatchProduct({ type: "REMOVE", payload: id });
   };
+
   return (
     <CartContext.Provider value={{ productState, addProduct, removeProduct }}>
       {children}

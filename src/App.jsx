@@ -1,17 +1,10 @@
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
-import Homepage from "./components/Homepage";
-import Registration from "./components/Registration";
-import Cart from "./components/Cart";
+import Hero from "./components/Hero";
 
 function App() {
   return (
     <>
-      <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/registration" element={<Registration />} />
-        <Route path="/cart" element={<Cart />} />
-      </Routes>
+      <Hero />
     </>
   );
 }

@@ -1,15 +1,10 @@
-import teaImg from "../assets/hero.jpeg";
-// import logo from "../image/logo.png";
-const Hero = () => {
+import "../scss/Hero.scss";
+export const Hero = () => {
   return (
-    <div>
-      <img style={{ width: "100vw", height: "100vh" }} src={teaImg} alt="tea" />
-      {/* <div>
-        <p>Find your perfact tea</p>
-        <input type="text" />
-      </div> */}
+    <div className="hero">
+      <div>
+        <p>Find your perfect tea</p>
+      </div>
     </div>
   );
 };
-
-export default Hero;

@@ -16,7 +16,8 @@ import cup3 from "./assets/cup3.png";
 
 export const products = [
   {
-    id: 1,
+    id: "tl-1",
+    type: "teaLeaves",
     productName: "Classic Earl Grey",
     price: 34.9,
     productImage: tea1,
@@ -24,7 +25,8 @@ export const products = [
       "A black tea flavored with oil of bergamot, providing a distinctive citrusy and floral aroma.",
   },
   {
-    id: 2,
+    id: "tl-2",
+    type: "teaLeaves",
     productName: "Chamomile Mint",
     price: 28.9,
     productImage: tea2,
@@ -32,7 +34,8 @@ export const products = [
       "A soothing herbal blend of chamomile flowers and refreshing mint leaves, perfect for relaxation.",
   },
   {
-    id: 3,
+    id: "tl-3",
+    type: "teaLeaves",
     productName: "Green Jasmine",
     price: 32.9,
     productImage: tea3,
@@ -40,7 +43,8 @@ export const products = [
       "Green tea infused with jasmine flowers, offering a delicate floral fragrance and a light, refreshing taste.",
   },
   {
-    id: 4,
+    id: "tl-4",
+    type: "teaLeaves",
     productName: "Masala Chai",
     price: 34.9,
     productImage: tea4,
@@ -48,7 +52,8 @@ export const products = [
       "A spiced black tea, typically featuring a mix of cinnamon, cardamom, cloves, ginger, and black pepper for a bold and warming flavor.",
   },
   {
-    id: 5,
+    id: "tl-5",
+    type: "teaLeaves",
     productName: "Hibiscus Berry",
     price: 29.9,
     productImage: tea5,
@@ -56,7 +61,8 @@ export const products = [
       "A vibrant and tart infusion of hibiscus petals and mixed berries, providing a burst of fruity goodness.",
   },
   {
-    id: 6,
+    id: "tl-6",
+    type: "teaLeaves",
     productName: "Oolong Orchid",
     price: 36.9,
     productImage: tea6,
@@ -64,7 +70,8 @@ export const products = [
       "Oolong tea with a hint of orchid aroma, delivering a balanced taste between black and green tea.",
   },
   {
-    id: 7,
+    id: "tl-7",
+    type: "teaLeaves",
     productName: "White Peach Blossom",
     price: 28.9,
     productImage: tea7,
@@ -72,7 +79,8 @@ export const products = [
       "White tea infused with the sweet essence of ripe peaches, creating a light and subtly fruity brew.",
   },
   {
-    id: 8,
+    id: "tl-8",
+    type: "teaLeaves",
     productName: "Peppermint Twist",
     price: 34.9,
     productImage: tea8,
@@ -80,7 +88,8 @@ export const products = [
       "Pure peppermint tea with a refreshing and cooling sensation, perfect for any time of the day.",
   },
   {
-    id: 9,
+    id: "tl-9",
+    type: "teaLeaves",
     productName: "Lemon Ginger Detox",
     price: 32.9,
     productImage: tea9,
@@ -88,7 +97,8 @@ export const products = [
       "A herbal blend featuring the zesty flavor of lemon and the warmth of ginger, known for its cleansing properties.",
   },
   {
-    id: 10,
+    id: "tl-10",
+    type: "teaLeaves",
     productName: "Rooibos Vanilla Caramel",
     price: 28.9,
     productImage: tea10,
@@ -96,7 +106,8 @@ export const products = [
       "Rooibos tea combined with the rich sweetness of vanilla and caramel, offering a caffeine-free and indulgent option.",
   },
   {
-    id: 11,
+    id: "tl-11",
+    type: "teaLeaves",
     productName: "Golden Turmeric Blend",
     price: 31.9,
     productImage: tea11,
@@ -104,7 +115,8 @@ export const products = [
       "A herbal blend featuring the warmth of turmeric, combined with spices like ginger and black pepper for a golden and invigorating cup.",
   },
   {
-    id: 12,
+    id: "tl-12",
+    type: "teaLeaves",
     productName: "Blueberry Lavender Dream",
     price: 33.9,
     productImage: tea12,
@@ -112,27 +124,27 @@ export const products = [
       "A delightful blend of blueberries and soothing lavender, offering a fragrant and calming tea experience.",
   },
   {
-    id: 13,
+    id: "tw-1",
+    type: "teaWare",
     productName: "Tea Cup - Tranquility",
     price: 45.9,
     productImage: cup1,
-    description:
-      "Escape into serenity.",
+    description: "Escape into serenity",
   },
   {
-    id: 14,
+    id: "tw-2",
+    type: "teaWare",
     productName: "Tea Cup - Elegant",
     price: 52.9,
     productImage: cup2,
-    description:
-      "Indulge in sophistication.",
+    description: "Indulge in sophistication",
   },
   {
-    id: 15,
+    id: "tw-3",
+    type: "teaWare",
     productName: "Tea Cup - Joy",
     price: 38.9,
     productImage: cup3,
-    description:
-      "Sip joyfully.",
+    description: "Savor the sweetness of each moment",
   },
 ];

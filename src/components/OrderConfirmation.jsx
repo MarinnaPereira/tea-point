@@ -1,13 +1,19 @@
+import "../scss/OrderConfirmation.scss";
+import logo from "../assets/logo.png";
 export const OrderConfirmation = () => {
   return (
-    <div>
-      <h2>Order Successfully Registered! </h2>
-      <p>Thank you for choosing Tea Point!</p>
-      <p>
-        A confirmation email with the details of your order will be sent
-        shortly.
-      </p>
-      <p>You will be redirected to our homepage in 5 seconds.</p>
+    <div className="order-confirmation">
+      <div>
+        <p>
+          Thank You for Choosing <span>TEA POINT!</span>
+        </p>
+        <p>It was truly a pleasure having you as our customer</p>
+        <p style={{ marginBottom: "2rem" }}>
+          An order confirmation has been sent to your registered email address.
+        </p>
+        <h2>Thank you!</h2>
+        <img src={logo} alt="logo" />
+      </div>
     </div>
   );
 };

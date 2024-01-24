@@ -4,7 +4,7 @@ import { Homepage } from "./components/Homepage";
 import { Login } from "./components/Login";
 import { Registration } from "./components/Registration";
 import { Cart } from "./components/Cart";
-import { OrderConformation } from "./components/OrderConformation";
+import { OrderConfirmation } from "./components/OrderConfirmation";
 import { NotFound } from "./components/NotFound";
 import { Footer } from "./components/Footer";
 import "./App.css";
@@ -18,7 +18,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/registration" element={<Registration />} />
         <Route path="/cart" element={<Cart />} />
-        <Route path="/OrderConformation" element={<OrderConformation />} />
+        <Route path="/OrderConfirmation" element={<OrderConfirmation />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

@@ -1,16 +1,27 @@
-.order-conformation {
+.order-confirmation {
   font-size: 1.8rem;
   height: 80vh;
-  background-color: #ecf2eb;
+  background-image: url("../assets/hero.jpg");
+  background-position: center;
+
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   line-height: 4rem;
   text-shadow: 1px 1px 2px black;
+
   span {
     background-color: #7e8f7b;
     color: white;
     padding-inline: 0.5rem;
+  }
+  img {
+    width: 200px;
+    height: 200px;
+    padding-top: 2em;
+    object-fit: cover;
+    margin: auto;
+    background-color: #7e8f7b;
   }
 }

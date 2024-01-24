@@ -8,6 +8,11 @@ import tea7 from "./assets/tea7.png";
 import tea8 from "./assets/tea8.png";
 import tea9 from "./assets/tea9.png";
 import tea10 from "./assets/tea10.png";
+import tea11 from "./assets/tea11.png";
+import tea12 from "./assets/tea12.png";
+import cup1 from "./assets/cup1.png";
+import cup2 from "./assets/cup2.png";
+import cup3 from "./assets/cup3.png";
 
 export const products = [
   {
@@ -60,19 +65,19 @@ export const products = [
   },
   {
     id: 7,
-    productName: "Peppermint Twist",
+    productName: "White Peach Blossom",
     price: 28.9,
     productImage: tea7,
     description:
-      "Pure peppermint tea with a refreshing and cooling sensation, perfect for any time of the day.",
+      "White tea infused with the sweet essence of ripe peaches, creating a light and subtly fruity brew.",
   },
   {
     id: 8,
-    productName: "White Peach Blossom",
+    productName: "Peppermint Twist",
     price: 34.9,
     productImage: tea8,
     description:
-      "White tea infused with the sweet essence of ripe peaches, creating a light and subtly fruity brew.",
+      "Pure peppermint tea with a refreshing and cooling sensation, perfect for any time of the day.",
   },
   {
     id: 9,
@@ -89,5 +94,45 @@ export const products = [
     productImage: tea10,
     description:
       "Rooibos tea combined with the rich sweetness of vanilla and caramel, offering a caffeine-free and indulgent option.",
+  },
+  {
+    id: 11,
+    productName: "Golden Turmeric Blend",
+    price: 31.9,
+    productImage: tea11,
+    description:
+      "A herbal blend featuring the warmth of turmeric, combined with spices like ginger and black pepper for a golden and invigorating cup.",
+  },
+  {
+    id: 12,
+    productName: "Blueberry Lavender Dream",
+    price: 33.9,
+    productImage: tea12,
+    description:
+      "A delightful blend of blueberries and soothing lavender, offering a fragrant and calming tea experience.",
+  },
+  {
+    id: 13,
+    productName: "Tea Cup - Tranquility",
+    price: 45.9,
+    productImage: cup1,
+    description:
+      "Escape into serenity.",
+  },
+  {
+    id: 14,
+    productName: "Tea Cup - Elegant",
+    price: 52.9,
+    productImage: cup2,
+    description:
+      "Indulge in sophistication.",
+  },
+  {
+    id: 15,
+    productName: "Tea Cup - Joy",
+    price: 38.9,
+    productImage: cup3,
+    description:
+      "Sip joyfully.",
   },
 ];

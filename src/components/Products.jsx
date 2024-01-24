@@ -1,3 +1,4 @@
+
 import {products} from "../data";
 import {UseCartContext} from "../contexts/CartContext";
 
@@ -71,6 +72,7 @@ export const Products = () => {
           ))}
         </div>
       </section>
+
     </>
   );
 };

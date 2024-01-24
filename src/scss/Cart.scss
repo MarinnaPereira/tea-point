@@ -31,6 +31,7 @@
     justify-content: space-between;
     height: 70vh;
     margin-bottom: 4rem;
+
     .product-cart {
       h1 {
         font-size: 1.5rem;
@@ -38,11 +39,50 @@
         padding-left: 2rem;
         background-color: #c0d1bd4c;
       }
-      .product {
-        margin-inline: 2rem;
-        margin-top: 1rem;
+      .main-container {
         display: flex;
         justify-content: space-between;
+        margin: 2rem;
+        .delete-icon {
+          cursor: pointer;
+          color: #000000c5;
+          font-size: 1.2rem;
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+        .product-container {
+          display: flex;
+          gap: 0.5rem;
+          img {
+            width: 120px;
+            height: 120px;
+            border: #94ad90 solid 2px;
+          }
+        }
+        .product {
+          margin-inline: 2rem;
+          margin-top: 1rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          button {
+            padding-inline: 0.6rem;
+            background-color: #e8eee7;
+            color: black;
+            &:hover {
+              background-color: #41523fc0;
+              color: white;
+            }
+          }
+          .amount-button {
+            display: flex;
+            .amount {
+              padding-inline: 1rem;
+              border: black solid 1px;
+            }
+          }
+        }
       }
     }
 

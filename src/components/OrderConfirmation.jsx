@@ -1,4 +1,5 @@
 import "../scss/OrderConfirmation.scss";
+
 import logo from "../assets/logo.png";
 export const OrderConfirmation = () => {
   return (
@@ -14,6 +15,7 @@ export const OrderConfirmation = () => {
         <h2>Thank you!</h2>
         <img src={logo} alt="logo" />
       </div>
+
     </div>
   );
 };

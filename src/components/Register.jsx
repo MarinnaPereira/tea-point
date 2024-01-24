@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useUsersContext } from "../contexts/UsersContext";
+import "../scss/Register.scss";
 
 export const Register = () => {
   const firstNameInput = useRef(null);

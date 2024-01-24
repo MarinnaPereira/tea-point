@@ -10,7 +10,7 @@ export const Cart = () => {
 
   return (
     <div className="cart-container">
-      {!cart.length === 0 ? (
+      {cart.length === 0 ? (
         <div className="e-cart">
           <div>
             <p className="e-cart-massage">Your basket is empty.</p>
@@ -22,7 +22,15 @@ export const Cart = () => {
       ) : (
         <div className="cart">
           <div className="product-cart">
-            <h1>Your Cart!</h1>
+            <div className="your-cart">
+              <h1>Your Cart!</h1>
+              {cart.length <= 1 ? (
+                <span>{cart.length} product</span>
+              ) : (
+                <span>{cart.length} products</span>
+              )}
+            </div>
+
             {cart.map((product) => (
               <div className="main-container">
                 <div className="product-container">
@@ -33,14 +41,20 @@ export const Cart = () => {
                     </span>
                     <span>€{product.price}</span>
                     <span className="amount-button">
-                      <button>-</button>
-                      <span className="amount">1</span>
-                      <button>+</button>
+                      <button onClick={() => removeProduct(product.id)}>
+                        -
+                      </button>
+                      <span className="amount">{product.amount}</span>
+                      <button onClick={() => addProduct(product)}>+</button>
                     </span>
                   </div>
                 </div>
                 <div>
-                  <FontAwesomeIcon icon={faTrashAlt} className="delete-icon" />
+                  <FontAwesomeIcon
+                    onClick={() => removeProduct(product.id)}
+                    icon={faTrashAlt}
+                    className="delete-icon"
+                  />
                 </div>
               </div>
             ))}

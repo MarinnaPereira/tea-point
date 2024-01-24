@@ -1,11 +1,18 @@
-.hover-nl {
-  &:hover {
-    color: #c0d1bd;
+nav {
+  .brand {
+    &:hover {
+      color: #c0d1bd;
+    }
   }
-}
-
-.hover-border {
-  &:hover {
-    border-color: #c0d1bd;
+  #icons-div {
+    a {
+      &.active {
+        color: #869184;
+      }
+      &:hover {
+        color: #c0d1bd;
+        cursor: pointer;
+      }
+    }
   }
 }

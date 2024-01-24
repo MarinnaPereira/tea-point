@@ -15,13 +15,28 @@ export const Social = () => {
   return (
     <section className="social p-6">
       <div className="flex justify-center gap-6 text-2xl mb-8">
-        <a href="#">
+        <a
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
+          }}
+        >
           <FaInstagram />
         </a>
-        <a href="#">
+        <a
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
+          }}
+        >
           <FaFacebook />
         </a>
-        <a href="#">
+        <a
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
+          }}
+        >
           <FaTiktok />
         </a>
       </div>

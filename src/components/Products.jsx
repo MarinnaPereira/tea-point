@@ -1,12 +1,14 @@
-
-import {products} from "../data";
-import {UseCartContext} from "../contexts/CartContext";
+import { products } from "../data";
+import { UseCartContext } from "../contexts/CartContext";
 
 const teaLeaves = products.filter((product) => product.type === "teaLeaves");
 const teaWare = products.filter((product) => product.type === "teaWare");
 
 export const Products = () => {
-  const {addProduct} = UseCartContext();
+  const { addProduct } = UseCartContext();
+  const handleAddToCart = (product) => {
+    addProduct(product);
+  };
   return (
     <>
       <section>
@@ -23,8 +25,7 @@ export const Products = () => {
                 <button
                   className="bg-[#c0d1bd]  w-full px-10 py-6 opacity-90"
                   onClick={() => {
-                    addProduct(product.id);
-                    console.log("Button clicked. Product ID:", product.id);
+                    handleAddToCart(product);
                   }}
                 >
                   <p className="text-white text-[23px]">Add to Cart</p>
@@ -55,8 +56,7 @@ export const Products = () => {
                 <button
                   className="bg-[#c0d1bd]  w-full px-10 py-6 opacity-90"
                   onClick={() => {
-                    addProduct(product.id);
-                    console.log("Button clicked. Product ID:", product.id);
+                    handleAddToCart(product);
                   }}
                 >
                   <p className="text-white text-[23px]">Add to Cart</p>
@@ -72,7 +72,6 @@ export const Products = () => {
           ))}
         </div>
       </section>
-
     </>
   );
 };

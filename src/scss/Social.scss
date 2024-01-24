@@ -1,7 +1,18 @@
 .social {
   background-color: #f4f1ed;
-}
 
-#btn-subscribe {
-  background-color: #374151a4;
+  a {
+    &:hover {
+      // color: #c0d1bd;
+      color: #6a7568;
+    }
+  }
+
+  #btn-subscribe {
+    background-color: #374151a4;
+    &:hover {
+      // background-color: #c0d1bd;
+      background-color: #6a7568;
+    }
+  }
 }

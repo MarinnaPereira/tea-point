@@ -1,19 +1,30 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
+import { FaRegTrashAlt } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import { UseCartContext } from "../contexts/CartContext";
 import "../scss/Cart.scss";
 
 export const Cart = () => {
-  const { productState, addProduct, removeProduct } = UseCartContext();
+  const {
+    productState,
+    addProduct,
+    removeProduct,
+    deleteProduct,
+    amountOfProducts,
+  } = UseCartContext();
   const cart = productState;
+
+  const sumOfPrices = cart
+    .reduce((acc, curr) => {
+      return acc + parseFloat(curr.price) * curr.amount;
+    }, 0)
+    .toFixed(2);
 
   return (
     <div className="cart-container">
       {cart.length === 0 ? (
         <div className="e-cart">
           <div>
-            <p className="e-cart-massage">Your basket is empty.</p>
+            <p className="e-cart-message">Your basket is empty.</p>
           </div>
           <NavLink to="/">
             <button className="e-cart-button">Start Shopping</button>
@@ -23,19 +34,19 @@ export const Cart = () => {
         <div className="cart">
           <div className="product-cart">
             <div className="your-cart">
-              <h1>Your Cart!</h1>
+              <h1>Your Cart</h1>
               {cart.length <= 1 ? (
-                <span>{cart.length} product</span>
+                <span>{amountOfProducts} product</span>
               ) : (
-                <span>{cart.length} products</span>
+                <span>{amountOfProducts} products</span>
               )}
             </div>
 
             {cart.map((product) => (
-              <div className="main-container">
+              <div key={product.id} className="main-container">
                 <div className="product-container">
                   <img src={product.productImage} alt="" />
-                  <div className="product" key={product.id}>
+                  <div className="product">
                     <span style={{ fontWeight: "bold" }}>
                       {product.productName}
                     </span>
@@ -49,10 +60,9 @@ export const Cart = () => {
                     </span>
                   </div>
                 </div>
-                <div>
-                  <FontAwesomeIcon
-                    onClick={() => removeProduct(product.id)}
-                    icon={faTrashAlt}
+                <div className="pt-4">
+                  <FaRegTrashAlt
+                    onClick={() => deleteProduct(product.id)}
                     className="delete-icon"
                   />
                 </div>
@@ -62,14 +72,21 @@ export const Cart = () => {
           <div className="total-product">
             <div>
               <span className="cart-massage">Estimated Total </span>
-              <span className="cart-total">
-                €{cart.reduce((total, product) => total + product.price, 0)}
-              </span>
+              <span className="cart-total">€{sumOfPrices}</span>
             </div>
-            <NavLink to="/OrderConformation">
+            <div className="flex justify-between items-center">
               {" "}
-              <button className="cart-button">Checkout</button>
-            </NavLink>
+              <NavLink to={"/"} className="underline ml-8">
+                Continue shopping
+              </NavLink>
+              <NavLink to="/OrderConformation">
+                {" "}
+                <button className="cart-button">Checkout</button>
+              </NavLink>
+              {/* <NavLink to={"/"} className="underline mr-8">
+                Continue shopping
+              </NavLink> */}
+            </div>
           </div>
         </div>
       )}

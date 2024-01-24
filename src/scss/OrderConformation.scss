@@ -1,0 +1,16 @@
+.order-conformation {
+  font-size: 1.8rem;
+  height: 80vh;
+  background-color: #ecf2eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 4rem;
+  text-shadow: 1px 1px 2px black;
+  span {
+    background-color: #7e8f7b;
+    color: white;
+    padding-inline: 0.5rem;
+  }
+}

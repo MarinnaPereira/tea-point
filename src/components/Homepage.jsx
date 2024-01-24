@@ -1,16 +1,13 @@
-import React from "react";
-import Nav from "./Nav";
-import Hero from "./Hero";
-import Products from "./Products";
+import { Hero } from "./Hero";
+import { Products } from "./Products";
+import { Social } from "./Social";
 
-const Homepage = () => {
+export const Homepage = () => {
   return (
     <>
-      <Nav />
       <Hero />
       <Products />
+      <Social />
     </>
   );
 };
-
-export default Homepage;

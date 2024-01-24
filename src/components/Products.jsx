@@ -1,7 +1,8 @@
+
 import React from 'react';
 import { products } from '../data';
 
-const Products = () => {
+export const Products = () => {
   return (
     <>
       <h2 className="text-[30px] text-center">Tea</h2>
@@ -25,6 +26,5 @@ const Products = () => {
       </div>
     </>
   );
-};
 
-export default Products;
+};

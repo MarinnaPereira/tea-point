@@ -1,7 +1,24 @@
-import React from "react";
+import { UseCartContext } from "../contexts/CartContext";
 
-const Cart = () => {
-  return <div>Cart</div>;
+export const Cart = () => {
+  const { productState } = UseCartContext();
+  const cart = productState;
+
+  return (
+    <>
+      {cart.length === 0 ? (
+        <div>
+          <div>
+            <p>Your basket is empty.</p>
+          </div>
+          <button>Start Shopping</button>
+        </div>
+      ) : (
+        <div>
+          <p>Estimated Total : </p>
+          <button>Checkout</button>
+        </div>
+      )}
+    </>
+  );
 };
-
-export default Cart;

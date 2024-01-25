@@ -20,6 +20,7 @@ export const Social = () => {
           onClick={(e) => {
             e.preventDefault();
           }}
+          className="transition-all ease-in-out duration-300"
         >
           <FaInstagram />
         </a>
@@ -28,6 +29,7 @@ export const Social = () => {
           onClick={(e) => {
             e.preventDefault();
           }}
+          className="transition-all ease-in-out duration-300"
         >
           <FaFacebook />
         </a>
@@ -36,6 +38,7 @@ export const Social = () => {
           onClick={(e) => {
             e.preventDefault();
           }}
+          className="transition-all ease-in-out duration-300"
         >
           <FaTiktok />
         </a>
@@ -54,7 +57,7 @@ export const Social = () => {
             ref={emailInput}
           />
           <button
-            className="text-white py-2 px-4 rounded-full block mx-auto"
+            className="text-white py-2 px-4 rounded-full block mx-auto transition-all ease-in-out duration-300"
             id="btn-subscribe"
             type="submit"
           >

@@ -1,4 +1,4 @@
-.cart-container {
+.cart-div {
   margin: auto;
   width: 500px;
 
@@ -104,8 +104,8 @@
         display: flex;
         justify-content: space-between;
       }
-      .cart-massage,
-      .cart-total {
+      .label-value,
+      .value {
         margin-top: 2rem;
         margin-inline: 2rem;
       }

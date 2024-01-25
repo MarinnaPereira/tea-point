@@ -10,15 +10,15 @@ import tea9 from "./assets/tea9.jpg";
 import tea10 from "./assets/tea10.jpg";
 import tea11 from "./assets/tea11.jpg";
 import tea12 from "./assets/tea12.jpg";
-import cup1 from "./assets/cup1.png";
-import cup2 from "./assets/cup2.png";
-import cup3 from "./assets/cup3.png";
-import set1 from "./assets/set1.png";
-import set2 from "./assets/set2.png";
-import set3 from "./assets/set3.png";
-import set4 from "./assets/set4.png";
-import set5 from "./assets/set5.png";
-import set6 from "./assets/set6.png";
+import cup1 from "./assets/cup1.jpg";
+import cup2 from "./assets/cup2.jpg";
+import cup3 from "./assets/cup3.jpg";
+import set1 from "./assets/set1.jpg";
+import set2 from "./assets/set2.jpg";
+import set3 from "./assets/set3.jpg";
+import set4 from "./assets/set4.jpg";
+import set5 from "./assets/set5.jpg";
+import set6 from "./assets/set6.jpg";
 
 export const products = [
   {

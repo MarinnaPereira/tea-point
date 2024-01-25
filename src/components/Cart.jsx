@@ -79,7 +79,7 @@ export const Cart = () => {
               <NavLink to={"/"} className="underline ml-8">
                 Continue shopping
               </NavLink>
-              <NavLink to="/OrderConfirmation">
+              <NavLink to="/order-confirmation">
                 {" "}
                 <button className="cart-button">Checkout</button>
               </NavLink>

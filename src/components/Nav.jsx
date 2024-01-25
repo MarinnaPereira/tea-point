@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { UseCartContext } from "../contexts/CartContext";
 // import { FaLeaf } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
 import { FaShoppingBasket } from "react-icons/fa";
@@ -6,6 +7,8 @@ import { FaRegUser } from "react-icons/fa";
 import "../scss/Nav.scss";
 
 export const Nav = () => {
+  const { amountOfProducts } = UseCartContext();
+
   const handleEmailClick = () => {
     const recipient = "contact@teapoint.com";
     const mailtoLink = `mailto:${recipient}`;
@@ -32,8 +35,18 @@ export const Nav = () => {
             <FaRegUser />
           </NavLink>
           <NavLink to={"/cart"}>
-            <FaShoppingBasket />
+            <div>
+              <FaShoppingBasket />
+            </div>
           </NavLink>
+          {amountOfProducts > 0 && (
+            <span
+              id="amountSpan"
+              className="flex justify-center relative -top-2 right-10 text-xs"
+            >
+              {amountOfProducts}
+            </span>
+          )}
         </div>
       </div>
     </nav>

@@ -1,0 +1,35 @@
+.order-confirmation {
+  font-size: 1.8rem;
+  height: 80vh;
+
+  background-image: url("../assets/hero.jpg");
+  background-position: center;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 4rem;
+  text-shadow: 1px 1px 2px black;
+
+  h2 {
+    padding-bottom: 2rem;
+  }
+
+  span {
+    background-color: #7e8f7b;
+    color: white;
+    padding-inline: 0.5rem;
+  }
+
+  img {
+    width: 200px;
+    // height: 200px;
+    object-fit: contain;
+    margin: auto;
+    // background-color: #7e8f7b;
+    background-color: transparent;
+    border: 1px solid #c0d1bd;
+  }
+}

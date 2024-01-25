@@ -2,13 +2,13 @@ nav {
   background-color: #ffffff;
   .brand {
     &:hover {
-      color: #c0d1bd;
+      color: #cbd7c9;
     }
   }
   #icons-div {
     a {
       &.active {
-        color: #869184;
+        color: #9ca69a;
       }
       &:hover {
         color: #c0d1bd;
@@ -20,7 +20,7 @@ nav {
       align-items: center;
       width: 20px;
       height: 20px;
-      padding: 11px;
+      // padding: 11px;
       color: inherit;
       background-color: #c0d1bd;
       border-radius: 50%;

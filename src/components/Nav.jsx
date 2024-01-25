@@ -42,7 +42,7 @@ export const Nav = () => {
           {amountOfProducts > 0 && (
             <span
               id="amountSpan"
-              className="flex justify-center relative -top-2 right-10 text-xs"
+              className="flex justify-center relative -top-2 right-6 md:right-11 p-2 text-xs"
             >
               {amountOfProducts}
             </span>

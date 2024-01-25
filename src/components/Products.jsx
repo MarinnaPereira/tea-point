@@ -1,11 +1,11 @@
-import {products} from "../data";
-import {UseCartContext} from "../contexts/CartContext";
+import { products } from "../data";
+import { useCartContext } from "../hooks/useCartContext";
 
 const teaLeaves = products.filter((product) => product.type === "teaLeaves");
 const teaWare = products.filter((product) => product.type === "teaware");
 
 export const Products = () => {
-  const {addProduct} = UseCartContext();
+  const { addProduct } = useCartContext();
   const handleAddToCart = (product) => {
     addProduct(product);
   };

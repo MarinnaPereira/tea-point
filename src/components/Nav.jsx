@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { UseCartContext } from "../contexts/CartContext";
+import { useCartContext } from "../hooks/useCartContext";
 // import { FaLeaf } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
 import { FaShoppingBasket } from "react-icons/fa";
@@ -7,7 +7,7 @@ import { FaRegUser } from "react-icons/fa";
 import "../scss/Nav.scss";
 
 export const Nav = () => {
-  const { amountOfProducts } = UseCartContext();
+  const { amountOfProducts } = useCartContext();
 
   const handleEmailClick = () => {
     const recipient = "contact@teapoint.com";

@@ -67,6 +67,7 @@
           display: flex;
           gap: 0.5rem;
           img {
+            object-fit: cover;
             width: 120px;
             height: 120px;
             border: #94ad90 solid 2px;
@@ -109,11 +110,15 @@
         margin-top: 2rem;
         margin-inline: 2rem;
       }
+      .underline {
+        font-size: 1.2rem;
+        text-shadow: 1px 1px 2px #41523fc0;
+      }
       .cart-button {
         background-color: #41523fc0;
         color: white;
         padding-block: 0.5rem;
-        padding-inline: 1rem;
+        padding-inline: 2.3rem;
         border-radius: 1rem;
         margin: 1rem;
         margin-left: 2rem;

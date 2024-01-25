@@ -18,7 +18,9 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/cart" element={<Cart />} />
+
         <Route path="/order-confirmation" element={<OrderConfirmation />} />
+
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

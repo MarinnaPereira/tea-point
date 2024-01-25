@@ -13,7 +13,9 @@
   line-height: 4rem;
   text-shadow: 1px 1px 2px black;
 
-
+  h2 {
+    padding-bottom: 2rem;
+  }
 
   span {
     background-color: #7e8f7b;
@@ -23,11 +25,11 @@
 
   img {
     width: 200px;
-    height: 200px;
-    padding-top: 2em;
-    object-fit: cover;
+    // height: 200px;
+    object-fit: contain;
     margin: auto;
-    background-color: #7e8f7b;
+    // background-color: #7e8f7b;
+    background-color: transparent;
+    border: 1px solid #c0d1bd;
   }
-
 }

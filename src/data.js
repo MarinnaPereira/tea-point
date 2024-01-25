@@ -1,18 +1,24 @@
-import tea1 from "./assets/tea1.png";
-import tea2 from "./assets/tea2.png";
-import tea3 from "./assets/tea3.png";
-import tea4 from "./assets/tea4.png";
-import tea5 from "./assets/tea5.png";
-import tea6 from "./assets/tea6.png";
-import tea7 from "./assets/tea7.png";
-import tea8 from "./assets/tea8.png";
-import tea9 from "./assets/tea9.png";
-import tea10 from "./assets/tea10.png";
-import tea11 from "./assets/tea11.png";
-import tea12 from "./assets/tea12.png";
+import tea1 from "./assets/tea1.jpg";
+import tea2 from "./assets/tea2.jpg";
+import tea3 from "./assets/tea3.jpg";
+import tea4 from "./assets/tea4.jpg";
+import tea5 from "./assets/tea5.jpg";
+import tea6 from "./assets/tea6.jpg";
+import tea7 from "./assets/tea7.jpg";
+import tea8 from "./assets/tea8.jpg";
+import tea9 from "./assets/tea9.jpg";
+import tea10 from "./assets/tea10.jpg";
+import tea11 from "./assets/tea11.jpg";
+import tea12 from "./assets/tea12.jpg";
 import cup1 from "./assets/cup1.png";
 import cup2 from "./assets/cup2.png";
 import cup3 from "./assets/cup3.png";
+import set1 from "./assets/set1.png";
+import set2 from "./assets/set2.png";
+import set3 from "./assets/set3.png";
+import set4 from "./assets/set4.png";
+import set5 from "./assets/set5.png";
+import set6 from "./assets/set6.png";
 
 export const products = [
   {
@@ -22,7 +28,7 @@ export const products = [
     price: 34.9,
     productImage: tea1,
     description:
-      "A black tea flavored with oil of bergamot, providing a distinctive citrusy and floral aroma.",
+      "Black Tea",
   },
   {
     id: "tl-2",
@@ -31,7 +37,7 @@ export const products = [
     price: 28.9,
     productImage: tea2,
     description:
-      "A soothing herbal blend of chamomile flowers and refreshing mint leaves, perfect for relaxation.",
+      "Herbal Tea",
   },
   {
     id: "tl-3",
@@ -40,7 +46,7 @@ export const products = [
     price: 32.9,
     productImage: tea3,
     description:
-      "Green tea infused with jasmine flowers, offering a delicate floral fragrance and a light, refreshing taste.",
+      "Green Tea",
   },
   {
     id: "tl-4",
@@ -49,7 +55,7 @@ export const products = [
     price: 34.9,
     productImage: tea4,
     description:
-      "A spiced black tea, typically featuring a mix of cinnamon, cardamom, cloves, ginger, and black pepper for a bold and warming flavor.",
+      "Spiced Black Tea",
   },
   {
     id: "tl-5",
@@ -58,7 +64,7 @@ export const products = [
     price: 29.9,
     productImage: tea5,
     description:
-      "A vibrant and tart infusion of hibiscus petals and mixed berries, providing a burst of fruity goodness.",
+      "Herbal Tea",
   },
   {
     id: "tl-6",
@@ -67,7 +73,7 @@ export const products = [
     price: 36.9,
     productImage: tea6,
     description:
-      "Oolong tea with a hint of orchid aroma, delivering a balanced taste between black and green tea.",
+      "Oolong Tea",
   },
   {
     id: "tl-7",
@@ -76,7 +82,7 @@ export const products = [
     price: 28.9,
     productImage: tea7,
     description:
-      "White tea infused with the sweet essence of ripe peaches, creating a light and subtly fruity brew.",
+      "White Tea",
   },
   {
     id: "tl-8",
@@ -85,7 +91,7 @@ export const products = [
     price: 34.9,
     productImage: tea8,
     description:
-      "Pure peppermint tea with a refreshing and cooling sensation, perfect for any time of the day.",
+      "Herbal Tea",
   },
   {
     id: "tl-9",
@@ -94,7 +100,7 @@ export const products = [
     price: 32.9,
     productImage: tea9,
     description:
-      "A herbal blend featuring the zesty flavor of lemon and the warmth of ginger, known for its cleansing properties.",
+      "Herbal Tea",
   },
   {
     id: "tl-10",
@@ -103,7 +109,7 @@ export const products = [
     price: 28.9,
     productImage: tea10,
     description:
-      "Rooibos tea combined with the rich sweetness of vanilla and caramel, offering a caffeine-free and indulgent option.",
+      "Rooibos Tea",
   },
   {
     id: "tl-11",
@@ -112,7 +118,7 @@ export const products = [
     price: 31.9,
     productImage: tea11,
     description:
-      "A herbal blend featuring the warmth of turmeric, combined with spices like ginger and black pepper for a golden and invigorating cup.",
+      "Herbal Tea",
   },
   {
     id: "tl-12",
@@ -121,30 +127,78 @@ export const products = [
     price: 33.9,
     productImage: tea12,
     description:
-      "A delightful blend of blueberries and soothing lavender, offering a fragrant and calming tea experience.",
+      "Herbal Tea",
   },
   {
-    id: "tw-1",
-    type: "teaWare",
+    id: "tc-1",
+    type: "teaware",
     productName: "Tea Cup - Tranquility",
     price: 45.9,
     productImage: cup1,
     description: "Escape into serenity",
   },
   {
-    id: "tw-2",
-    type: "teaWare",
+    id: "tc-2",
+    type: "teaware",
     productName: "Tea Cup - Elegant",
-    price: 52.9,
+    price: 51.9,
     productImage: cup2,
     description: "Indulge in sophistication",
   },
   {
-    id: "tw-3",
-    type: "teaWare",
+    id: "tc-3",
+    type: "teaware",
     productName: "Tea Cup - Joy",
     price: 38.9,
     productImage: cup3,
-    description: "Savor the sweetness of each moment",
+    description: "Savor the sweetness of happiness",
+  },
+  {
+    id: "ts-1",
+    type: "teaware",
+    productName: "Tea Set - Fusion",
+    price: 120.9,
+    productImage: set1,
+    description: "Integration of sacred",
+  },
+  {
+    id: "ts-2",
+    type: "teaware",
+    productName: "Tea Set - Harmony",
+    price: 140.9,
+    productImage: set2,
+    description: "Beauty of grace",
+  },
+  {
+    id: "ts-3",
+    type: "teaware",
+    productName: "Tea Set - Citrus Bliss",
+    price: 130.9,
+    productImage: set3,
+    description: "Lemonade serenade",
+  },
+  {
+    id: "ts-4",
+    type: "teaware",
+    productName: "Tea Set - Zen",
+    price: 210.9,
+    productImage: set4,
+    description: "Resonance of gratitude",
+  },
+  {
+    id: "ts-5",
+    type: "teaware",
+    productName: "Tea Set - Oriental",
+    price: 180.9,
+    productImage: set5,
+    description: "Fascinating journey",
+  },
+  {
+    id: "ts-6",
+    type: "teaware",
+    productName: "Tea Set - Oasis",
+    price: 230.9,
+    productImage: set6,
+    description: "Serene moments of life",
   },
 ];

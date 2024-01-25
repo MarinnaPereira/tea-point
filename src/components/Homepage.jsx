@@ -7,7 +7,6 @@ export const Homepage = () => {
     <>
       <Hero />
       <Products />
-      <Social />
     </>
   );
 };

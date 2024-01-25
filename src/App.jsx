@@ -6,6 +6,7 @@ import { Register } from "./components/Register";
 import { Cart } from "./components/Cart";
 import { OrderConfirmation } from "./components/OrderConfirmation";
 import { NotFound } from "./components/NotFound";
+import { Social } from "./components/Social";
 import { Footer } from "./components/Footer";
 import "./App.css";
 
@@ -21,6 +22,8 @@ function App() {
         <Route path="/order-confirmation" element={<OrderConfirmation />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <Social />
+
       <Footer />
     </>
   );

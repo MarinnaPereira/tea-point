@@ -26,6 +26,16 @@ export const CartProvider = ({ children }) => {
     0
   );
 
+  const sumOfPrices = productState
+    .reduce((acc, curr) => {
+      return acc + parseFloat(curr.price) * curr.amount;
+    }, 0)
+    .toFixed(2);
+
+  const shippingCosts = (sumOfPrices * 0.12).toFixed(2);
+
+  const total = parseFloat(sumOfPrices) + parseFloat(shippingCosts);
+
   return (
     <CartContext.Provider
       value={{
@@ -34,6 +44,9 @@ export const CartProvider = ({ children }) => {
         removeProduct,
         deleteProduct,
         amountOfProducts,
+        sumOfPrices,
+        shippingCosts,
+        total,
       }}
     >
       {children}

@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import { useUsersContext } from "../contexts/UsersContext";
+import { useUsersContext } from "../hooks/useUsersContext";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
 import "../scss/LoginRegister.scss";
@@ -88,7 +88,7 @@ export const Login = () => {
             </span>
           </div>
           <div className="flex justify-between items-center py-5">
-            <button className="rounded-xl px-6 py-2 text-slate-100">
+            <button className="rounded-xl px-6 py-2 text-slate-100 transition-all ease-in-out duration-300">
               Login
             </button>
             <NavLink to={"/register"} className="underline text-form">

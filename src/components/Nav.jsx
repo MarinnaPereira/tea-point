@@ -9,7 +9,7 @@ import "../scss/Nav.scss";
 export const Nav = () => {
   const { amountOfProducts } = useCartContext();
 
-  const handleEmailClick = () => {
+  const emailClickHandler = () => {
     const recipient = "contact@teapoint.com";
     const mailtoLink = `mailto:${recipient}`;
     window.location.href = mailtoLink;
@@ -21,20 +21,31 @@ export const Nav = () => {
         <div></div>
         <div className="text-center">
           <NavLink to={"/"}>
-            <span className="tracking-tight brand">TEA POINT</span>
+            <span className="tracking-tight brand transition-all ease-in-out duration-300">
+              TEA POINT
+            </span>
           </NavLink>
         </div>
         <div
           id="icons-div"
           className="flex gap-5 md:gap-10 text-xl md:text-2xl"
         >
-          <a onClick={handleEmailClick}>
+          <a
+            onClick={emailClickHandler}
+            className="transition-all ease-in-out duration-300"
+          >
             <FaEnvelope />
           </a>
-          <NavLink to={"/login"}>
+          <NavLink
+            to={"/login"}
+            className="transition-all ease-in-out duration-300"
+          >
             <FaRegUser />
           </NavLink>
-          <NavLink to={"/cart"}>
+          <NavLink
+            to={"/cart"}
+            className="transition-all ease-in-out duration-300"
+          >
             <div>
               <FaShoppingBasket />
             </div>

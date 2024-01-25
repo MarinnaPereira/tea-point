@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
-import { useUsersContext } from "../contexts/UsersContext";
+import { useUsersContext } from "../hooks/useUsersContext";
 import "../scss/LoginRegister.scss";
 
 export const Register = () => {
@@ -116,7 +116,7 @@ export const Register = () => {
             up to receive exclusive promotions and benefits from Tea Point!
           </label>
           <div className="flex justify-between items-center py-5">
-            <button className="rounded-xl px-6 py-2 text-slate-100">
+            <button className="rounded-xl px-6 py-2 text-slate-100 transition-all ease-in-out duration-300">
               Create account
             </button>
             <NavLink to={"/login"} className="underline text-form">

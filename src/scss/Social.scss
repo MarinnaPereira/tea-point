@@ -5,6 +5,9 @@
       color: #c0d1bd;
     }
   }
+  input::placeholder {
+    color: #41523fc0;
+  }
   #btn-subscribe {
     background-color: #41523fc0;
     &:hover {

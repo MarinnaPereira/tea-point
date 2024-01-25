@@ -15,7 +15,6 @@ export const OrderConfirmation = () => {
         <h2>Thank you!</h2>
         <img src={logo} alt="logo" />
       </div>
-
     </div>
   );
 };

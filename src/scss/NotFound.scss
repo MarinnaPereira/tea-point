@@ -1,0 +1,31 @@
+.notfound-container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 2rem;
+
+  div {
+    margin: auto;
+    margin-top: 5rem;
+
+    p {
+      margin-bottom: 5rem;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+    div {
+      img {
+        width: 400px;
+        object-fit: contain;
+      }
+      h2 {
+        text-shadow: 1px 1px 1px #41523fc0;
+        font-size: 1.3rem;
+        &:hover {
+          transform: scale(0.9);
+        }
+      }
+    }
+  }
+}

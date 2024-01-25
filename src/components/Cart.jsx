@@ -26,7 +26,7 @@ export const Cart = () => {
           <div>
             <p className="e-cart-message">Your basket is empty.</p>
           </div>
-          <NavLink to="/">
+          <NavLink to="/products">
             <button className="e-cart-button">Start Shopping</button>
           </NavLink>
         </div>

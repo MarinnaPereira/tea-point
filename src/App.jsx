@@ -8,6 +8,7 @@ import { OrderConfirmation } from "./components/OrderConfirmation";
 import { NotFound } from "./components/NotFound";
 import { Footer } from "./components/Footer";
 import "./App.css";
+import { Products } from "./components/Products";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/cart" element={<Cart />} />
-
+        <Route path="/products" element={<Products />} />
         <Route path="/order-confirmation" element={<OrderConfirmation />} />
 
         <Route path="*" element={<NotFound />} />

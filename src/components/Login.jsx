@@ -53,29 +53,33 @@ export const Login = () => {
   };
 
   return (
-    <div className="register-container">
-      <h1>Login</h1>
-      <p>Great that you're back! Please log in with your email and password.</p>
-      <form onSubmit={submitHandler}>
-        {error && <p>{error}</p>}
-        <input
-          type="email"
-          ref={emailInput}
-          placeholder="youremail@email.com*"
-          required
-        />
-        <input
-          type={showPassword ? "text" : "password"}
-          placeholder="Password*"
-          ref={passwordInput}
-          required
-        />
-        <div onClick={clickHandler}>
-          {showPassword ? <FaEyeSlash /> : <FaEye />}
-        </div>
-        <button>Login</button>
-      </form>
-      <NavLink to={"/register"}>Create an account</NavLink>
+    <div className="register-container flex justify-center items-center ">
+      <div>
+        <h1>Login</h1>
+        <p>
+          Great that you're back! Please log in with your email and password.
+        </p>
+        <form onSubmit={submitHandler}>
+          {error && <p>{error}</p>}
+          <input
+            type="email"
+            ref={emailInput}
+            placeholder="youremail@email.com*"
+            required
+          />
+          <input
+            type={showPassword ? "text" : "password"}
+            placeholder="Password*"
+            ref={passwordInput}
+            required
+          />
+          <div onClick={clickHandler}>
+            {showPassword ? <FaEyeSlash /> : <FaEye />}
+          </div>
+          <button>Login</button>
+        </form>
+        <NavLink to={"/register"}>Create an account</NavLink>
+      </div>
     </div>
   );
 };

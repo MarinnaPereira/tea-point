@@ -13,8 +13,8 @@ export const Social = () => {
     alert("Email successfully registered!");
   };
   return (
-    <section className="social p-6">
-      <div className="flex justify-center gap-6 text-2xl mb-8">
+    <section className="social p-8">
+      <div className="flex justify-center gap-6 text-2xl mb-7">
         <a
           href="#"
           onClick={(e) => {
@@ -41,7 +41,7 @@ export const Social = () => {
         </a>
       </div>
       <div className="newsletter text-center">
-        <label htmlFor="email" className="block font-medium mb-2">
+        <label htmlFor="email" className="block text-lg font-medium mb-2">
           Subscribe to our newsletter
         </label>
         <form onSubmit={clickHandler}>

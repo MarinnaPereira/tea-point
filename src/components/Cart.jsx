@@ -1,6 +1,6 @@
 import { FaRegTrashAlt } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
-import { UseCartContext } from "../contexts/CartContext";
+import { useCartContext } from "../hooks/useCartContext";
 import "../scss/Cart.scss";
 
 export const Cart = () => {
@@ -10,7 +10,7 @@ export const Cart = () => {
     removeProduct,
     deleteProduct,
     amountOfProducts,
-  } = UseCartContext();
+  } = useCartContext();
   const cart = productState;
 
   const sumOfPrices = cart
@@ -83,9 +83,6 @@ export const Cart = () => {
                 {" "}
                 <button className="cart-button">Checkout</button>
               </NavLink>
-              {/* <NavLink to={"/"} className="underline mr-8">
-                Continue shopping
-              </NavLink> */}
             </div>
           </div>
         </div>

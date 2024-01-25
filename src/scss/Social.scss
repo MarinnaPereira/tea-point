@@ -1,20 +1,13 @@
 .social {
   background-color: #f4f1ed;
-
   a {
     &:hover {
       color: #c0d1bd;
-      // color: #6a7568;
     }
   }
-
   #btn-subscribe {
-    // background-color: #374151a4;
     background-color: #41523fc0;
-
     &:hover {
-      // background-color: #c0d1bd;
-      // background-color: #6a7568;
       background-color: #c0d1bd;
       color: inherit;
     }

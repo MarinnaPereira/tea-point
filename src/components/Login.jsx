@@ -3,7 +3,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { useUsersContext } from "../contexts/UsersContext";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
-import "../scss/Login.scss";
+import "../scss/LoginRegister.scss";
 
 export const Login = () => {
   const emailInput = useRef(null);
@@ -32,11 +32,7 @@ export const Login = () => {
       (user) => user.email === loginInfo.email
     );
 
-    if (loginInfo.email === "") {
-      setError("Please enter your email.");
-      emailInput.current.focus();
-      emailInput.current.value = "";
-    } else if (!registeredUser) {
+    if (!registeredUser) {
       setError("Email not found.");
       emailInput.current.focus();
       emailInput.current.value = "";
@@ -54,19 +50,19 @@ export const Login = () => {
   };
 
   return (
-    <div id="login-container" className="flex justify-center">
+    <div id="form-container" className="flex justify-center">
       <div
-        id="login-div"
+        id="form-div"
         className="min-w-xs xs:max-w-lg lg:max-w-xl px-8 pt-6 pb-8 mt-6 mb-12"
       >
-        <h1 id="login-heading" className="my-3 px-8 py-1">
+        <h1 id="form-heading" className="my-3 px-8 py-1">
           Login
         </h1>
-        <p className="px-8 py-3 text-login">
+        <p className="px-8 py-3 text-form">
           Great that you are back! Please log in with your email and password.
         </p>
         <form onSubmit={submitHandler} className="px-8">
-          {error && <p>{error}</p>}
+          {error && <p className="text-red-600 error-msg">{error}</p>}
           <div className="flex align-middle shadow border w-full my-4 input-div">
             <input
               type="email"
@@ -95,7 +91,7 @@ export const Login = () => {
             <button className="rounded-xl px-6 py-2 text-slate-100">
               Login
             </button>
-            <NavLink to={"/register"} className="underline text-login">
+            <NavLink to={"/register"} className="underline text-form">
               Create an account
             </NavLink>
           </div>

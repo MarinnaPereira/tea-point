@@ -76,10 +76,10 @@ export const Cart = () => {
             </div>
             <div className="flex justify-between items-center">
               {" "}
-              <NavLink to={"/"} className="underline ml-8">
+              <NavLink to={"/products"} className="underline ml-8">
                 Continue shopping
               </NavLink>
-              <NavLink to="/order-confirmation">
+              <NavLink to={{ pathname: "/payment", state: { sumOfPrices } }}>
                 {" "}
                 <button className="cart-button">Checkout</button>
               </NavLink>

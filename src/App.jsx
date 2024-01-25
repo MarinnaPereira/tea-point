@@ -9,6 +9,7 @@ import { NotFound } from "./components/NotFound";
 import { Footer } from "./components/Footer";
 import "./App.css";
 import { Products } from "./components/Products";
+import Payment from "./components/Payment";
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/products" element={<Products />} />
         <Route path="/order-confirmation" element={<OrderConfirmation />} />
-
+        <Route path="/payment" element={<Payment />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

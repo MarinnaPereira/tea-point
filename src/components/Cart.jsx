@@ -84,7 +84,6 @@ export const Cart = () => {
                 </div>
               ))}
             </div>
-
             <div className="total">
               <div className="m-8 flex justify-between">
                 <p>Subtotal</p>
@@ -99,9 +98,9 @@ export const Cart = () => {
                 <p className="font-semibold">
                   €{isShippingFree ? sumOfPrices : total}
                 </p>
+
               </div>
             </div>
-
             <div className="action ml-8 mr-4 flex justify-between items-center">
               <NavLink to={"/"} className="underline">
                 Continue shopping

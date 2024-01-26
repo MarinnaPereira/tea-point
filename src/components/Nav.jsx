@@ -1,13 +1,13 @@
-import { NavLink } from "react-router-dom";
-import { UseCartContext } from "../contexts/CartContext";
+import {NavLink} from "react-router-dom";
+import {UseCartContext} from "../contexts/CartContext";
 // import { FaLeaf } from "react-icons/fa";
-import { FaEnvelope } from "react-icons/fa";
-import { FaShoppingBasket } from "react-icons/fa";
-import { FaRegUser } from "react-icons/fa";
+import {FaEnvelope} from "react-icons/fa";
+import {FaShoppingBasket} from "react-icons/fa";
+import {FaRegUser} from "react-icons/fa";
 import "../scss/Nav.scss";
 
 export const Nav = () => {
-  const { amountOfProducts } = UseCartContext();
+  const {amountOfProducts} = UseCartContext();
 
   const handleEmailClick = () => {
     const recipient = "contact@teapoint.com";
@@ -15,12 +15,16 @@ export const Nav = () => {
     window.location.href = mailtoLink;
   };
 
+  const handleTeaPointClick = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <nav className="p-4 text-2xl">
       <div className="container mx-auto grid grid-cols-3 items-center gap-4">
         <div></div>
         <div className="text-center">
-          <NavLink to={"/"}>
+          <NavLink to={"/"} exact onClick={handleTeaPointClick}>
             <span className="tracking-tight brand">TEA POINT</span>
           </NavLink>
         </div>

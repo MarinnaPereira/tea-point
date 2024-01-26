@@ -45,7 +45,7 @@ export const Cart = () => {
             {cart.map((product) => (
               <div key={product.id} className="main-container">
                 <div className="product-container">
-                  <img src={product.productImage} alt="" />
+                  <img src={product.productImage} alt={product.productName} />
                   <div className="product">
                     <span style={{ fontWeight: "bold" }}>
                       {product.productName}

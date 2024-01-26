@@ -7,7 +7,7 @@ export const NotFound = () => {
   return (
     <div className="notfound-container">
       <div>
-        <h1>Sorry we can't find that page</h1>
+        <h1>{`Sorry we can't find that page`}</h1>
         <p>
           Our search can help you discover available products or use the link
           below

@@ -69,6 +69,9 @@ export const Cart = () => {
                 </div>
               ))}
             </div>
+
+
+
             <div className="total-product">
               <div>
                 <span className="label-value">Subtotal</span>
@@ -83,10 +86,12 @@ export const Cart = () => {
                 <span className="value font-semibold">€{total.toFixed()}</span>
               </div>
               <div className="flex justify-between items-center">
+
                 {" "}
                 <NavLink to={"/"} className="underline ml-8">
                   Continue shopping
                 </NavLink>
+              <NavLink to={{ pathname: "/payment", state: { sumOfPrices } }}>
                 <NavLink to="/order-confirmation">
                   {" "}
                   <button className="cart-button">Checkout</button>

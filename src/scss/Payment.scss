@@ -1,0 +1,71 @@
+.adress-forms {
+  justify-content: center;
+  .billing-adress-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-left: 3rem;
+    h1 {
+      font-size: 1.2rem;
+      padding: 0.4rem 1rem;
+      background-color: #94ad90;
+      margin-block: 1rem;
+      color: white;
+    }
+    lable {
+      font-weight: bold;
+    }
+    input,
+    select {
+      border: gray solid 1px;
+      margin-bottom: 1rem;
+      height: 2rem;
+    }
+    input,
+    select,
+    lable {
+      margin-left: 1rem;
+    }
+  }
+  .delivery-adress-form {
+    .option-delivery {
+      margin-top: 2rem;
+      padding-left: 1.7rem;
+    }
+  }
+}
+.sign-up {
+  margin-top: 1.5rem;
+}
+.payment-container h1 {
+  font-size: 1.2rem;
+  padding: 0.4rem 1rem;
+  background-color: #94ad90;
+  margin-block: 1rem;
+  color: white;
+}
+.payment-form {
+  lable {
+    font-weight: bold;
+  }
+  input {
+    border: gray solid 1px;
+    margin-bottom: 1rem;
+    height: 2rem;
+  }
+  input,
+  lable {
+    margin-left: 1rem;
+  }
+  input {
+    margin-bottom: 1.5rem;
+  }
+  button {
+    background-color: #1e201dc0;
+    color: white;
+    padding-block: 0.7rem;
+    padding-inline: 1.2rem;
+    margin: 1.5rem;
+    margin-bottom: 5rem;
+  }
+}

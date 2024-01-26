@@ -17,85 +17,104 @@ export const Cart = () => {
 
   const cart = productState;
 
-  return (
-    <div className="cart-container ">
-      {/* <div className="flex justify-center min-w-xs xs:max-w-lg lg:max-w-2xl pb-8 mt-6"> */}
-      <div className="cart-div">
-        {cart.length === 0 ? (
-          <div className="e-cart">
-            <div>
-              <p className="e-cart-message">Your basket is empty.</p>
-            </div>
-            <NavLink to="/products">
-              <button className="e-cart-button">Start Shopping</button>
-            </NavLink>
-          </div>
-        ) : (
-          <div className="cart">
-            <div className="product-cart">
-              <div className="your-cart">
-                <h1>Your Cart</h1>
-                {cart.length <= 1 ? (
-                  <span>{amountOfProducts} product</span>
-                ) : (
-                  <span>{amountOfProducts} products</span>
-                )}
-              </div>
+  const isShippingFree = sumOfPrices > 100;
 
+  return (
+    <div id="cart-container" className="flex justify-center">
+      {cart.length === 0 ? (
+        <div id="empty-cart" className="pt-52 pb-40 text-center">
+          <p className="pb-6 text-xl">Your basket is empty.</p>
+          <NavLink to="/products">
+            <button className="rounded-xl text-xl px-6 py-2 text-slate-100 transition-all ease-in-out duration-300">
+              Start Shopping
+            </button>
+          </NavLink>
+        </div>
+      ) : (
+        <div id="product-cart" className="px-8 pt-6 pb-8 mt-6 mb-12">
+          <div className="cart-header flex justify-between my-3 rounded-r-2xl">
+            <h1 className="text-2xl pl-8 py-1">Your Cart</h1>
+            <span className="rounded-xl inline-flex items-center px-3 text-slate-100">
+              {amountOfProducts}
+              {amountOfProducts === 1 ? " product" : " products"}
+            </span>
+          </div>
+          <div className="card-body">
+            <div className="products">
               {cart.map((product) => (
-                <div key={product.id} className="main-container">
-                  <div className="product-container">
-                    <img src={product.productImage} alt="" />
-                    <div className="product">
-                      <span style={{ fontWeight: "bold" }}>
-                        {product.productName}
-                      </span>
-                      <span>€{product.price}</span>
-                      <span className="amount-button">
-                        <button onClick={() => removeProduct(product.id)}>
+                <div
+                  key={product.id}
+                  className="single-product flex justify-between m-8 ml-0 md:ml-8"
+                >
+                  <div className="product-container flex justify-between gap-2">
+                    <img
+                      src={product.productImage}
+                      alt="product"
+                      className="hidden md:block"
+                    />
+                    <div className="flex-col space-y-4 mx-6 pt-3">
+                      <h3 className="font-bold">{product.productName}</h3>
+                      <p>€{product.price}</p>
+                      <div className="amount-info flex-col">
+                        <button
+                          onClick={() => removeProduct(product.id)}
+                          className="px-2 hover:text-slate-100 transition-all ease-in-out duration-300"
+                        >
                           -
                         </button>
-                        <span className="amount">{product.amount}</span>
-                        <button onClick={() => addProduct(product)}>+</button>
-                      </span>
+                        {/* <input type="number" value={product.amount} /> */}
+                        <span className="amount px-4 border border-teal-950 ">
+                          {product.amount}
+                        </span>
+                        <button
+                          onClick={() => addProduct(product)}
+                          className="px-2 hover:text-slate-100 transition-all ease-in-out duration-300"
+                        >
+                          +
+                        </button>
+                      </div>
                     </div>
                   </div>
-                  <div className="pt-4">
+                  <div className="delete-product w-4 pt-4 cursor-pointer text-xl">
                     <FaRegTrashAlt
                       onClick={() => deleteProduct(product.id)}
-                      className="delete-icon"
+                      className="delete-icon transition-all ease-in-out duration-300"
                     />
                   </div>
                 </div>
               ))}
             </div>
-            <div className="total-product">
-              <div>
-                <span className="label-value">Subtotal</span>
-                <span className="value">€{sumOfPrices}</span>
+
+            <div className="total">
+              <div className="m-8 flex justify-between">
+                <p>Subtotal</p>
+                <p>€{sumOfPrices}</p>
               </div>
-              <div>
-                <span className="label-value">Shipping costs</span>
-                <span className="value">€{shippingCosts}</span>
+              <div className="m-8 flex justify-between">
+                <p>{isShippingFree ? "Free shipping" : "Shipping costs"}</p>
+                <p>€{isShippingFree ? "0" : shippingCosts}</p>
               </div>
-              <div>
-                <span className="label-value font-semibold">Total</span>
-                <span className="value font-semibold">€{total.toFixed()}</span>
-              </div>
-              <div className="flex justify-between items-center">
-                {" "}
-                <NavLink to={"/"} className="underline ml-8">
-                  Continue shopping
-                </NavLink>
-                <NavLink to="/order-confirmation">
-                  {" "}
-                  <button className="cart-button">Checkout</button>
-                </NavLink>
+              <div className="m-8 flex justify-between">
+                <h3 className="font-semibold">Total</h3>
+                <p className="font-semibold">
+                  €{isShippingFree ? sumOfPrices : total}
+                </p>
               </div>
             </div>
+
+            <div className="action ml-8 mr-4 flex justify-between items-center">
+              <NavLink to={"/"} className="underline">
+                Continue shopping
+              </NavLink>
+              <NavLink to="/order-confirmation">
+                <button className="rounded-xl px-7 py-2 text-slate-100 transition-all ease-in-out duration-300">
+                  Checkout
+                </button>
+              </NavLink>
+            </div>
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 };

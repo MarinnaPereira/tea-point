@@ -1,11 +1,17 @@
 #form-container {
   #form-div {
+    // width: 575px;
+    width: 600px;
     background-color: #ffffff;
-    box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.122);
     border-radius: 8px;
-    #form-heading {
+    @media screen and (max-width: 567px) {
+      width: 480px;
+      box-shadow: none;
+      border-radius: 0;
+    }
+    .form-heading {
       background-color: #ecf1eb;
-      font-size: 1.5rem;
     }
     .text-form {
       color: #5a6c58c0;
@@ -28,8 +34,11 @@
           color: inherit;
         }
       }
-      p.success-msg {
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+      a {
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.122);
+      }
+      .success-msg {
+        color: rgba(80, 135, 74, 0.753);
       }
     }
   }

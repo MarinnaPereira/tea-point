@@ -63,53 +63,48 @@ export const Register = () => {
 
   return (
     <div id="form-container" className="flex justify-center">
-      <div
-        id="form-div"
-        className="min-w-xs xs:max-w-lg lg:max-w-xl px-8 pt-6 pb-8 mt-6 mb-12"
-      >
-        <h1 id="form-heading" className="my-3 px-8 py-1">
-          Register
-        </h1>
-        <p className="px-8 py-3 text-form">
+      <div id="form-div" className="px-8 pt-6 pb-8 mt-6 mb-12">
+        <h1 className="form-heading text-2xl my-3 px-8 py-1">Register</h1>
+        <p className="text-form px-8 py-3">
           For an even better experience, create your account and enjoy our
           benefits.
         </p>
         <form onSubmit={submitHandler} className="px-8">
-          {error && <p className="text-red-600 error-msg">{error}</p>}
+          {error && <p className="error-msg text-red-600">{error}</p>}
           <input
             type="text"
             placeholder="First Name*"
             ref={firstNameInput}
             required
-            className="shadow border w-full my-3 input-div py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+            className="input-div shadow border w-full my-3 py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
           />
           <input
             type="text"
             placeholder="Last Name*"
             ref={lastNameInput}
             required
-            className="shadow border w-full my-3 input-div py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+            className="input-div shadow border w-full my-3 py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
           />
           <input
             type="email"
             ref={emailInput}
             placeholder="youremail@email.com*"
             required
-            className="shadow border w-full my-3 input-div py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+            className="input-div shadow border w-full my-3 py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
           />
           <input
             type="password"
             placeholder="Password*"
             ref={passwordInput}
             required
-            className="shadow border w-full my-3 input-div py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+            className="input-div shadow border w-full my-3 py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
           />
           <input
             type="password"
             placeholder="Confirm password*"
             ref={confirmPasswordInput}
             required
-            className="shadow border w-full my-3 input-div py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+            className="input-div shadow border w-full my-3 py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
           />
           <label>
             <input type="checkbox" name="signUp" id="signUp" /> I want to sign
@@ -119,7 +114,7 @@ export const Register = () => {
             <button className="rounded-xl px-6 py-2 text-slate-100 transition-all ease-in-out duration-300">
               Create account
             </button>
-            <NavLink to={"/login"} className="underline text-form">
+            <NavLink to={"/login"} className="text-form underline">
               Go back to login
             </NavLink>
           </div>

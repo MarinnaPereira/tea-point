@@ -16,7 +16,7 @@ export const Nav = () => {
   };
 
   return (
-    <nav className="p-4 text-2xl">
+    <nav className="p-4 text-3xl">
       <div className="container mx-auto grid grid-cols-3 items-center gap-4">
         <div></div>
         <div className="text-center">

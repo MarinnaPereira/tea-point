@@ -1,0 +1,45 @@
+#form-container {
+  #form-div {
+    // width: 575px;
+    width: 600px;
+    background-color: #ffffff;
+    box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.122);
+    border-radius: 8px;
+    @media screen and (max-width: 567px) {
+      width: 480px;
+      box-shadow: none;
+      border-radius: 0;
+    }
+    .form-heading {
+      background-color: #ecf1eb;
+    }
+    .text-form {
+      color: #5a6c58c0;
+    }
+    form {
+      .error-msg {
+        font-size: 0.9rem;
+      }
+      .input-div {
+        border-color: #41523fc0;
+      }
+      input::placeholder,
+      span {
+        color: #41523fc0;
+      }
+      button {
+        background-color: rgba(65, 82, 63, 0.753);
+        &:hover {
+          background-color: #c0d1bd;
+          color: inherit;
+        }
+      }
+      a {
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.122);
+      }
+      .success-msg {
+        color: rgba(80, 135, 74, 0.753);
+      }
+    }
+  }
+}

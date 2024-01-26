@@ -13,13 +13,14 @@ export const Social = () => {
     alert("Email successfully registered!");
   };
   return (
-    <section className="social p-6">
-      <div className="flex justify-center gap-6 text-2xl mb-8">
+    <section className="social p-8">
+      <div className="flex justify-center gap-6 text-2xl mb-7">
         <a
           href="#"
           onClick={(e) => {
             e.preventDefault();
           }}
+          className="transition-all ease-in-out duration-300"
         >
           <FaInstagram />
         </a>
@@ -28,6 +29,7 @@ export const Social = () => {
           onClick={(e) => {
             e.preventDefault();
           }}
+          className="transition-all ease-in-out duration-300"
         >
           <FaFacebook />
         </a>
@@ -36,12 +38,13 @@ export const Social = () => {
           onClick={(e) => {
             e.preventDefault();
           }}
+          className="transition-all ease-in-out duration-300"
         >
           <FaTiktok />
         </a>
       </div>
       <div className="newsletter text-center">
-        <label htmlFor="email" className="block font-medium mb-2">
+        <label htmlFor="email" className="block text-lg font-medium mb-2">
           Subscribe to our newsletter
         </label>
         <form onSubmit={clickHandler}>
@@ -54,7 +57,7 @@ export const Social = () => {
             ref={emailInput}
           />
           <button
-            className="text-white py-2 px-4 rounded-full block mx-auto"
+            className="text-white py-2 px-4 rounded-full block mx-auto transition-all ease-in-out duration-300"
             id="btn-subscribe"
             type="submit"
           >

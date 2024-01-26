@@ -1,130 +1,73 @@
-.cart-container {
-  margin: auto;
-  width: 500px;
-
-  .e-cart {
-    text-align: center;
-    font-size: 1.3rem;
-    height: 50vh;
-
-    .e-cart-message {
-      margin-top: 10rem;
-      margin-bottom: 1rem;
-    }
-    .e-cart-button {
-      background-color: #41523fc0;
-      color: white;
-      padding-block: 0.5rem;
-      padding-inline: 1rem;
-      border-radius: 1rem;
-
+#cart-container {
+  #empty-cart {
+    button {
+      background-color: rgba(65, 82, 63, 0.753);
       &:hover {
         background-color: #c0d1bd;
-        color: black;
+        color: inherit;
       }
     }
   }
-
-  .cart {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-bottom: 4rem;
-
-    .product-cart {
-      .your-cart {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 2rem;
-        padding-left: 2rem;
-        background-color: #c0d1bd4c;
-        span {
-          padding-inline: 0.8rem;
-          padding-top: 0.5rem;
-          background-color: #94ad90;
-          color: white;
-          border-radius: 10px;
-        }
-        h1 {
-          font-size: 1.5rem;
-        }
-      }
-
-      .main-container {
-        display: flex;
-        justify-content: space-between;
-        margin: 2rem;
-        .delete-icon {
-          cursor: pointer;
-          color: #000000c5;
-          font-size: 1.2rem;
-          &:hover {
-            transform: scale(1.2);
-          }
-        }
-        .product-container {
-          display: flex;
-          gap: 0.5rem;
-          img {
-            object-fit: cover;
-            width: 120px;
-            height: 120px;
-            border: #94ad90 solid 2px;
-          }
-        }
-        .product {
-          margin-inline: 2rem;
-          margin-top: 1rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          button {
-            padding-inline: 0.6rem;
-            background-color: #e8eee7;
-            color: black;
-            &:hover {
-              background-color: #41523fc0;
-              color: white;
-            }
-          }
-          .amount-button {
-            display: flex;
-            .amount {
-              padding-inline: 1rem;
-              border: black solid 1px;
-            }
-          }
-        }
+  #product-cart {
+    // width: 575px;
+    width: 650px;
+    background-color: #ffffff;
+    box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.122);
+    border-radius: 8px;
+    @media screen and (max-width: 567px) {
+      width: 480px;
+      box-shadow: none;
+      border-radius: 0;
+    }
+    .cart-header {
+      background-color: #ecf1eb;
+      span {
+        background-color: #94ad90;
       }
     }
-
-    .total-product {
-      border-top: gray solid 1px;
-      div {
-        display: flex;
-        justify-content: space-between;
+    .card-body {
+      .products {
+        .single-product {
+          .product-container {
+            img {
+              width: 125px;
+              height: 125px;
+              object-fit: cover;
+              border: #94ad90 solid 2px;
+            }
+            div {
+              .amount-info {
+                button {
+                  background-color: #e8eee7;
+                  &:hover {
+                    background-color: #41523fc0;
+                  }
+                }
+              }
+            }
+          }
+          .delete-product {
+            .delete-icon {
+              &:hover {
+                transform: scale(1.2);
+              }
+            }
+          }
+        }
       }
-      .cart-massage,
-      .cart-total {
-        margin-top: 2rem;
-        margin-inline: 2rem;
+      .total {
+        border-top: rgba(65, 82, 63, 0.753) solid 1px;
       }
-      .underline {
-        font-size: 1.2rem;
-        text-shadow: 1px 1px 2px #41523fc0;
-      }
-      .cart-button {
-        background-color: #41523fc0;
-        color: white;
-        padding-block: 0.5rem;
-        padding-inline: 2.3rem;
-        border-radius: 1rem;
-        margin: 1rem;
-        margin-left: 2rem;
-
-        &:hover {
-          background-color: #c0d1bd;
-          color: black;
+      .action {
+        a {
+          text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.12);
+        }
+        button {
+          background-color: rgba(65, 82, 63, 0.753);
+          &:hover {
+            background-color: #c0d1bd;
+            color: inherit;
+          }
         }
       }
     }

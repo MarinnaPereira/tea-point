@@ -1,15 +1,7 @@
-import { createContext, useContext, useReducer } from "react";
+import { createContext, useReducer } from "react";
+import { usersReducer } from "../reducers/usersReducer";
 
 export const UsersContext = createContext();
-
-const usersReducer = (state, action) => {
-  switch (action.type) {
-    case "ADD":
-      return [...state, action.payload];
-    default:
-      throw new Error("No action of:", action.type);
-  }
-};
 
 const initialState = [{ email: "marinna.dos.anjos@gmail.com" }];
 
@@ -25,8 +17,4 @@ export const UsersProvider = ({ children }) => {
       {children}
     </UsersContext.Provider>
   );
-};
-
-export const useUsersContext = () => {
-  return useContext(UsersContext);
 };

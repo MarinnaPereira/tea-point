@@ -1,11 +1,11 @@
-import {products} from "../data";
-import {UseCartContext} from "../contexts/CartContext";
+import { products } from "../data";
+import { useCartContext } from "../hooks/useCartContext";
 
 const teaLeaves = products.filter((product) => product.type === "teaLeaves");
 const teaWare = products.filter((product) => product.type === "teaware");
 
 export const Products = () => {
-  const {addProduct} = UseCartContext();
+  const { addProduct } = useCartContext();
   const handleAddToCart = (product) => {
     addProduct(product);
   };
@@ -33,7 +33,7 @@ export const Products = () => {
               />
               <div className="absolute inset-x-0 bottom-28 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                 <button
-                  className="bg-[#c0d1bd]  w-full px-10 py-6 opacity-90"
+                  className="bg-[#c0d1bd] w-full px-10 py-6 opacity-90"
                   onClick={() => {
                     handleAddToCart(product);
                   }}
@@ -70,7 +70,7 @@ export const Products = () => {
               />
               <div className="absolute inset-x-0 bottom-28 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                 <button
-                  className="bg-[#c0d1bd]  w-full px-10 py-6 opacity-90"
+                  className="bg-[#c0d1bd] w-full px-10 py-6 opacity-90"
                   onClick={() => {
                     handleAddToCart(product);
                   }}
@@ -78,9 +78,7 @@ export const Products = () => {
                   <p className="text-white text-[23px]">Add to Cart</p>
                 </button>
               </div>
-              <h3 className="text-[25px] text-[#444444] pt-5">
-                {product.productName}
-              </h3>
+              <h3 className="text-[25px] pt-5">{product.productName}</h3>
               <p className="text-[#6f6f6f] italic">{product.description}</p>
               {product.id.startsWith("tc") ? (
                 <p className="text-[20px]">

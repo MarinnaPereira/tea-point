@@ -1,20 +1,23 @@
-#login-container {
-  #login-div {
+#form-container {
+  #form-div {
     background-color: #ffffff;
     box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.15);
-    border-radius: 15px;
-    #login-heading {
+    border-radius: 8px;
+    #form-heading {
       background-color: #ecf1eb;
       font-size: 1.5rem;
     }
-    .text-login {
+    .text-form {
       color: #5a6c58c0;
     }
     form {
+      .error-msg {
+        font-size: 0.9rem;
+      }
       .input-div {
         border-color: #41523fc0;
       }
-      input,
+      input::placeholder,
       span {
         color: #41523fc0;
       }
@@ -24,6 +27,9 @@
           background-color: #c0d1bd;
           color: inherit;
         }
+      }
+      p.success-msg {
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
       }
     }
   }

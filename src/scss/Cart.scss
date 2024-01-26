@@ -1,4 +1,4 @@
-.cart-container {
+.cart-div {
   margin: auto;
   width: 500px;
 
@@ -20,7 +20,7 @@
 
       &:hover {
         background-color: #c0d1bd;
-        color: black;
+        color: inherit;
       }
     }
   }
@@ -56,7 +56,7 @@
         margin: 2rem;
         .delete-icon {
           cursor: pointer;
-          color: #000000c5;
+          color: inherit;
           font-size: 1.2rem;
           &:hover {
             transform: scale(1.2);
@@ -81,7 +81,7 @@
           button {
             padding-inline: 0.6rem;
             background-color: #e8eee7;
-            color: black;
+            color: inherit;
             &:hover {
               background-color: #41523fc0;
               color: white;
@@ -104,14 +104,14 @@
         display: flex;
         justify-content: space-between;
       }
-      .cart-massage,
-      .cart-total {
+      .label-value,
+      .value {
         margin-top: 2rem;
         margin-inline: 2rem;
       }
       .underline {
-        font-size: 1.2rem;
-        text-shadow: 1px 1px 2px #41523fc0;
+        font-size: 1.1rem;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
       }
       .cart-button {
         background-color: #41523fc0;
@@ -124,7 +124,7 @@
 
         &:hover {
           background-color: #c0d1bd;
-          color: black;
+          color: inherit;
         }
       }
     }

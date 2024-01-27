@@ -1,9 +1,12 @@
 import { FaRegTrashAlt } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useCartContext } from "../hooks/useCartContext";
 import "../scss/Cart.scss";
+import { useUsersContext } from "../hooks/useUsersContext";
 
 export const Cart = () => {
+  const navigate = useNavigate();
+
   const {
     productState,
     addProduct,
@@ -13,11 +16,26 @@ export const Cart = () => {
     sumOfPrices,
     shippingCosts,
     total,
+    setHasCheckedOut,
   } = useCartContext();
+
+  const { loggedInUser } = useUsersContext();
 
   const cart = productState;
 
   const isShippingFree = sumOfPrices > 100;
+
+  const clickHandler = () => {
+    setHasCheckedOut((prev) => {
+      !prev;
+    });
+    if (loggedInUser) {
+      navigate("/payment");
+    } else {
+      alert("Please, login before proceed.");
+      navigate("/login");
+    }
+  };
 
   return (
     <div id="cart-container" className="flex justify-center">
@@ -101,14 +119,15 @@ export const Cart = () => {
               </div>
             </div>
             <div className="action ml-8 mr-4 flex justify-between items-center">
-              <NavLink to={"/"} className="underline">
+              <NavLink to={"/products"} className="underline">
                 Continue shopping
               </NavLink>
-              <NavLink to="/payment">
-                <button className="rounded-xl px-7 py-2 text-slate-100 transition-all ease-in-out duration-300">
-                  Checkout
-                </button>
-              </NavLink>
+              <button
+                onClick={clickHandler}
+                className="rounded-xl px-7 py-2 text-slate-100 transition-all ease-in-out duration-300"
+              >
+                Checkout
+              </button>
             </div>
           </div>
         </div>

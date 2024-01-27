@@ -1,24 +1,24 @@
-import tea1 from "./assets/tea1.jpg";
-import tea2 from "./assets/tea2.jpg";
-import tea3 from "./assets/tea3.jpg";
-import tea4 from "./assets/tea4.jpg";
-import tea5 from "./assets/tea5.jpg";
-import tea6 from "./assets/tea6.jpg";
-import tea7 from "./assets/tea7.jpg";
-import tea8 from "./assets/tea8.jpg";
-import tea9 from "./assets/tea9.jpg";
-import tea10 from "./assets/tea10.jpg";
-import tea11 from "./assets/tea11.jpg";
-import tea12 from "./assets/tea12.jpg";
-import cup1 from "./assets/cup1.jpg";
-import cup2 from "./assets/cup2.jpg";
-import cup3 from "./assets/cup3.jpg";
-import set1 from "./assets/set1.jpg";
-import set2 from "./assets/set2.jpg";
-import set3 from "./assets/set3.jpg";
-import set4 from "./assets/set4.jpg";
-import set5 from "./assets/set5.jpg";
-import set6 from "./assets/set6.jpg";
+import tea1 from "../assets/tea1.jpg";
+import tea2 from "../assets/tea2.jpg";
+import tea3 from "../assets/tea3.jpg";
+import tea4 from "../assets/tea4.jpg";
+import tea5 from "../assets/tea5.jpg";
+import tea6 from "../assets/tea6.jpg";
+import tea7 from "../assets/tea7.jpg";
+import tea8 from "../assets/tea8.jpg";
+import tea9 from "../assets/tea9.jpg";
+import tea10 from "../assets/tea10.jpg";
+import tea11 from "../assets/tea11.jpg";
+import tea12 from "../assets/tea12.jpg";
+import cup1 from "../assets/cup1.jpg";
+import cup2 from "../assets/cup2.jpg";
+import cup3 from "../assets/cup3.jpg";
+import set1 from "../assets/set1.jpg";
+import set2 from "../assets/set2.jpg";
+import set3 from "../assets/set3.jpg";
+import set4 from "../assets/set4.jpg";
+import set5 from "../assets/set5.jpg";
+import set6 from "../assets/set6.jpg";
 
 export const products = [
   {
@@ -27,8 +27,7 @@ export const products = [
     productName: "Classic Earl Grey",
     price: 34.9,
     productImage: tea1,
-    description:
-      "Black Tea",
+    description: "Black Tea",
   },
   {
     id: "tl-2",
@@ -36,8 +35,7 @@ export const products = [
     productName: "Chamomile Mint",
     price: 28.9,
     productImage: tea2,
-    description:
-      "Herbal Tea",
+    description: "Herbal Tea",
   },
   {
     id: "tl-3",
@@ -45,8 +43,7 @@ export const products = [
     productName: "Green Jasmine",
     price: 32.9,
     productImage: tea3,
-    description:
-      "Green Tea",
+    description: "Green Tea",
   },
   {
     id: "tl-4",
@@ -54,8 +51,7 @@ export const products = [
     productName: "Masala Chai",
     price: 34.9,
     productImage: tea4,
-    description:
-      "Spiced Black Tea",
+    description: "Spiced Black Tea",
   },
   {
     id: "tl-5",
@@ -63,8 +59,7 @@ export const products = [
     productName: "Hibiscus Berry",
     price: 29.9,
     productImage: tea5,
-    description:
-      "Herbal Tea",
+    description: "Herbal Tea",
   },
   {
     id: "tl-6",
@@ -72,8 +67,7 @@ export const products = [
     productName: "Oolong Orchid",
     price: 36.9,
     productImage: tea6,
-    description:
-      "Oolong Tea",
+    description: "Oolong Tea",
   },
   {
     id: "tl-7",
@@ -81,8 +75,7 @@ export const products = [
     productName: "White Peach Blossom",
     price: 28.9,
     productImage: tea7,
-    description:
-      "White Tea",
+    description: "White Tea",
   },
   {
     id: "tl-8",
@@ -90,8 +83,7 @@ export const products = [
     productName: "Peppermint Twist",
     price: 34.9,
     productImage: tea8,
-    description:
-      "Herbal Tea",
+    description: "Herbal Tea",
   },
   {
     id: "tl-9",
@@ -99,8 +91,7 @@ export const products = [
     productName: "Lemon Ginger Detox",
     price: 32.9,
     productImage: tea9,
-    description:
-      "Herbal Tea",
+    description: "Herbal Tea",
   },
   {
     id: "tl-10",
@@ -108,8 +99,7 @@ export const products = [
     productName: "Rooibos Vanilla Caramel",
     price: 28.9,
     productImage: tea10,
-    description:
-      "Rooibos Tea",
+    description: "Rooibos Tea",
   },
   {
     id: "tl-11",
@@ -117,8 +107,7 @@ export const products = [
     productName: "Golden Turmeric Blend",
     price: 31.9,
     productImage: tea11,
-    description:
-      "Herbal Tea",
+    description: "Herbal Tea",
   },
   {
     id: "tl-12",
@@ -126,8 +115,7 @@ export const products = [
     productName: "Blueberry Lavender Dream",
     price: 33.9,
     productImage: tea12,
-    description:
-      "Herbal Tea",
+    description: "Herbal Tea",
   },
   {
     id: "tc-1",

@@ -1,4 +1,4 @@
-import { products } from "../data";
+import { products } from "../data/products";
 import { useCartContext } from "../hooks/useCartContext";
 
 const teaLeaves = products.filter((product) => product.type === "teaLeaves");

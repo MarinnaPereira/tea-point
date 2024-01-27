@@ -1,17 +1,27 @@
-import React, { useState } from "react";
+import { useEffect, useState } from "react";
 import "../scss/Payment.scss";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { useCartContext } from "../hooks/useCartContext";
 
-const Payment = () => {
-  const { sumOfPrices, shippingCosts, total } = useCartContext();
+export const Payment = () => {
+  const location = useLocation();
+  const sumOfPrices = location.state ? location.state.sumOfPrices : 0;
+  //   console.log("sumofprice:", sumOfPrices);
+
+  const { setHasCheckedOut, emptyCart } = useCartContext();
+
+  useEffect(() => {
+    setHasCheckedOut((prev) => {
+      !prev;
+    });
+  }, []);
 
   const handlePayment = () => {
+    emptyCart();
     alert("Payment successful! Thank you for your purchase. ");
   };
 
   const [adressState, setAdressState] = useState(false);
-  const isShippingFree = sumOfPrices > 100;
 
   return (
     <div>
@@ -99,8 +109,8 @@ const Payment = () => {
           </form>
         </div>
       </div>
-      <div className="flex justify-center mb-2  text-xl mr-18 ">
-        <label className="sign-up w-1/2 md:w-2/5 lg:w-auto ">
+      <div className="flex justify-center mb-2  text-xl mr-18">
+        <label className="sign-up">
           <input type="checkbox" name="signUp" id="signUp" /> I agree to receive
           information , special offers and promotion from TEA POINT!
         </label>
@@ -115,12 +125,12 @@ const Payment = () => {
           <hr className="mb-4" />
           <div className="flex justify-between px-4 mb-4  ">
             <p>Shipping</p>
-            {isShippingFree ? <p>Free shipping</p> : <p>€ {shippingCosts}</p>}
+            {sumOfPrices < 100 ? <span>€ 15</span> : <span>-</span>}
           </div>
           <hr className="mb-4" />
           <div className="flex justify-between px-4 mb-4 font-bold text-lg">
             <h2>Total For Your Order</h2>
-            <span>€ {isShippingFree ? sumOfPrices : total}</span>
+            <span>€ {sumOfPrices + 15}</span>
           </div>
           <p>
             The total amount you pay includes all applicable customs duties &
@@ -147,6 +157,7 @@ const Payment = () => {
               placeholder="Enter 3 digit cvv number"
             />
             <NavLink to="/order-confirmation">
+              {" "}
               <button onClick={handlePayment}>Pay and place order</button>
             </NavLink>
           </form>
@@ -155,5 +166,3 @@ const Payment = () => {
     </div>
   );
 };
-
-export default Payment;

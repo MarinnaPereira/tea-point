@@ -1,6 +1,6 @@
-.adress-forms {
+.address-forms {
   justify-content: center;
-  .billing-adress-form {
+  .billing-address-form {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -12,7 +12,7 @@
       margin-block: 1rem;
       color: white;
     }
-    lable {
+    label {
       font-weight: bold;
     }
     input,
@@ -23,11 +23,11 @@
     }
     input,
     select,
-    lable {
+    label {
       margin-left: 1rem;
     }
   }
-  .delivery-adress-form {
+  .delivery-address-form {
     .option-delivery {
       margin-top: 2rem;
       padding-left: 1.7rem;
@@ -45,7 +45,7 @@
   color: white;
 }
 .payment-form {
-  lable {
+  label {
     font-weight: bold;
   }
   input {
@@ -53,7 +53,7 @@
     margin-bottom: 1rem;
   }
   input,
-  lable {
+  label {
     margin-left: 1rem;
   }
   input {
@@ -67,4 +67,16 @@
     margin: 1.5rem;
     margin-bottom: 5rem;
   }
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(67, 10, 10, 0.757);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }

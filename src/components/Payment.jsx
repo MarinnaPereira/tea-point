@@ -10,9 +10,7 @@ export const Payment = () => {
   const isShippingFree = sumOfPrices > 100;
 
   useEffect(() => {
-    setHasCheckedOut((prev) => {
-      !prev;
-    });
+    setHasCheckedOut((prev) => !prev);
   }, []);
 
   const [paymentMethod, setPaymentMethod] = useState("");
@@ -22,88 +20,88 @@ export const Payment = () => {
     alert("Payment successful! Thank you for your purchase. ");
   };
 
-  const [adressState, setAdressState] = useState(false);
+  const [addressState, setAddressState] = useState(false);
 
   return (
     <div>
-      <div className="flex gap-10 flex-wrap adress-forms">
+      <div className="flex gap-10 flex-wrap address-forms">
         <div>
-          <form className="billing-adress-form w-96 ">
-            <h1>Billing Adress</h1>
-            <lable htmlFor="first-name">First Name</lable>
+          <form className="billing-address-form w-96 ">
+            <h1>Billing Address</h1>
+            <label htmlFor="first-name">First Name</label>
             <input type="text" id="first-name" />
 
-            <lable htmlFor="last-name">Last Name</lable>
+            <label htmlFor="last-name">Last Name</label>
             <input type="text" id="last-name" />
 
-            <lable htmlFor="email"> Email</lable>
+            <label htmlFor="email"> Email</label>
             <input type="email" id="email" />
 
-            <lable htmlFor="county">Country</lable>
+            <label htmlFor="county">Country</label>
             <select name="" id="county">
               <option value=""> Germany</option>
             </select>
 
-            <lable htmlFor="address-1">Adress Line 1</lable>
+            <label htmlFor="address-1">Address Line 1</label>
             <input type="text , number" id="address-1" />
 
-            <lable htmlFor="address-2">Adress Line 2</lable>
+            <label htmlFor="address-2">Address Line 2</label>
             <input type="text" id="address-2" />
 
-            <lable htmlFor="city">City</lable>
+            <label htmlFor="city">City</label>
             <input type="text" id="city" />
 
-            <lable htmlFor="postcode">Zip / Postcode</lable>
+            <label htmlFor="postcode">Zip / Postcode</label>
             <input type="number" id="postcode" />
 
-            <lable htmlFor="mobile-phone"> Mobile Phone</lable>
+            <label htmlFor="mobile-phone"> Mobile Phone</label>
             <input type="number" id="mobile-phone" />
           </form>
         </div>
 
         <div>
-          <form className="billing-adress-form delivery-adress-form w-96 ">
-            <h1>Delivery Adress</h1>
+          <form className="billing-address-form delivery-address-form w-96 ">
+            <h1>Delivery Address</h1>
 
             <select
               name=""
               id=""
               className="option-delivery"
               onChange={(e) => {
-                setAdressState(e.target.value === "alternative");
+                setAddressState(e.target.value === "alternative");
               }}
             >
-              <option value="default">Default (same as billing adress)</option>
+              <option value="default">Default (same as billing address)</option>
               <option value="alternative">
                 Add an alternative delivery address
               </option>
             </select>
-            {adressState && (
+            {addressState && (
               <>
-                <lable htmlFor="first-name">First Name</lable>
+                <label htmlFor="first-name">First Name</label>
                 <input type="text" id="first-name" />
 
-                <lable htmlFor="last-name">Last Name</lable>
+                <label htmlFor="last-name">Last Name</label>
                 <input type="text" id="last-name" />
 
-                <lable htmlFor="county">Country</lable>
+                <label htmlFor="county">Country</label>
                 <select name="" id="county">
                   <option value=""> Germany</option>
                 </select>
 
-                <lable htmlFor="address-1">Adress Line 1</lable>
+                <label htmlFor="address-1">Address Line 1</label>
                 <input type="text , number" id="address-1" />
 
-                <lable htmlFor="address-2">Adress Line 2</lable>
+                <label htmlFor="address-2">Address Line 2</label>
                 <input type="text" id="address-2" />
 
-                <lable htmlFor="city">City</lable>
+                <label htmlFor="city">City</label>
                 <input type="text" id="city" />
 
-                <lable htmlFor="postcode">Zip / Postcode</lable>
+                <label htmlFor="postcode">Zip / Postcode</label>
                 <input type="number" id="postcode" />
 
-                <lable htmlFor="mobile-phone"> Mobile Phone</lable>
+                <label htmlFor="mobile-phone"> Mobile Phone</label>
                 <input type="number" id="mobile-phone" />
               </>
             )}
@@ -165,17 +163,17 @@ export const Payment = () => {
               </label>
             </div>
 
-            <lable htmlFor="card-number">Card Number:</lable>
+            <label htmlFor="card-number">Card Number:</label>
             <input
               type="text"
               id="card-number"
               placeholder="Enter card number"
             />
 
-            <lable htmlFor="expiry-date">Expiry Date:</lable>
+            <label htmlFor="expiry-date">Expiry Date:</label>
             <input type="date" id="expiry-date" placeholder="MM/YYYY" />
 
-            <lable htmlFor="cvv"> Security code:</lable>
+            <label htmlFor="cvv"> Security code:</label>
             <input
               type="text"
               id="cvv"

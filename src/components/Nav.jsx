@@ -1,14 +1,15 @@
 import { NavLink } from "react-router-dom";
 import { useCartContext } from "../hooks/useCartContext";
+import { useUsersContext } from "../hooks/useUsersContext";
 // import { FaLeaf } from "react-icons/fa";
-import {FaEnvelope} from "react-icons/fa";
-import {FaShoppingBasket} from "react-icons/fa";
-import {FaRegUser} from "react-icons/fa";
+import { FaEnvelope } from "react-icons/fa";
+import { FaShoppingBasket } from "react-icons/fa";
+import { FaRegUser } from "react-icons/fa";
 import "../scss/Nav.scss";
 
 export const Nav = () => {
   const { amountOfProducts } = useCartContext();
-
+  const { firstLetter } = useUsersContext();
 
   const emailClickHandler = () => {
     const recipient = "contact@teapoint.com";
@@ -41,12 +42,24 @@ export const Nav = () => {
           >
             <FaEnvelope />
           </a>
-          <NavLink
-            to={"/login"}
-            className="transition-all ease-in-out duration-300"
-          >
-            <FaRegUser />
-          </NavLink>
+          {firstLetter ? (
+            <NavLink
+              to="/Logout"
+              className="transition-all ease-in-out duration-300"
+            >
+              <span id="first-letter" className="rounded-full">
+                {firstLetter}
+              </span>
+            </NavLink>
+          ) : (
+            <NavLink
+              to={"/login"}
+              className="transition-all ease-in-out duration-300"
+            >
+              <FaRegUser />
+            </NavLink>
+          )}
+
           <NavLink
             to={"/cart"}
             className="transition-all ease-in-out duration-300"

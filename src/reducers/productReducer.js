@@ -28,7 +28,6 @@ export const productReducer = (state, action) => {
       } else {
         return state;
       }
-
     case "DELETE":
       const itemDeleted = state.find(
         (product) => product.id === action.payload
@@ -37,6 +36,8 @@ export const productReducer = (state, action) => {
         return state.filter((product) => product.id !== action.payload);
       }
       break;
+    case "EMPTY":
+      return [];
     default:
       throw new Error("No action of:", action.type);
   }

@@ -15,11 +15,24 @@ nav {
         cursor: pointer;
       }
     }
-    #amountSpan {
+    span {
       display: flex;
       align-items: center;
+      justify-content: center;
       width: 20px;
       height: 20px;
+    }
+    #first-letter {
+      padding: 12px;
+      font-size: 1.3rem;
+      background-color: rgba(65, 82, 63, 0.753);
+      color: whitesmoke;
+      &:hover {
+        background-color: #c0d1bd;
+        color: rgba(65, 82, 63, 0.753);
+      }
+    }
+    #amountSpan {
       color: inherit;
       background-color: #c0d1bd;
       border-radius: 50%;

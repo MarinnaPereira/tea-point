@@ -2,15 +2,16 @@ import { Routes, Route } from "react-router-dom";
 import { Header } from "./components/Header";
 import { Homepage } from "./components/Homepage";
 import { Login } from "./components/Login";
+import { Logout } from "./components/Logout";
 import { Register } from "./components/Register";
 import { Cart } from "./components/Cart";
 import { OrderConfirmation } from "./components/OrderConfirmation";
 import { NotFound } from "./components/NotFound";
 import { Social } from "./components/Social";
 import { Footer } from "./components/Footer";
-import "./App.css";
 import { Products } from "./components/Products";
-import Payment from "./components/Payment";
+import { Payment } from "./components/Payment";
+import "./App.css";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/logout" element={<Logout />} />
         <Route path="/register" element={<Register />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/products" element={<Products />} />

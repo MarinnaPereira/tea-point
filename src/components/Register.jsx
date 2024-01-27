@@ -17,10 +17,16 @@ export const Register = () => {
     e.preventDefault();
     setError(null);
     setSuccessfullyRegistered("");
+    console.log(usersState);
 
     const currentData = {
       firstName: firstNameInput.current.value.trim(),
       lastName: lastNameInput.current.value.trim(),
+      name: `${
+        firstNameInput.current.value.trim() +
+        " " +
+        lastNameInput.current.value.trim()
+      }`,
       email: emailInput.current.value.trim(),
       password: passwordInput.current.value.trim(),
     };

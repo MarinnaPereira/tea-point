@@ -1,20 +1,21 @@
 import { useEffect, useState } from "react";
 import "../scss/Payment.scss";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useCartContext } from "../hooks/useCartContext";
 
 export const Payment = () => {
-  const location = useLocation();
-  const sumOfPrices = location.state ? location.state.sumOfPrices : 0;
-  //   console.log("sumofprice:", sumOfPrices);
+  const { sumOfPrices, shippingCosts, total, setHasCheckedOut, emptyCart } =
+    useCartContext();
 
-  const { setHasCheckedOut, emptyCart } = useCartContext();
+  const isShippingFree = sumOfPrices > 100;
 
   useEffect(() => {
     setHasCheckedOut((prev) => {
       !prev;
     });
   }, []);
+
+  const [paymentMethod, setPaymentMethod] = useState("");
 
   const handlePayment = () => {
     emptyCart();
@@ -109,8 +110,8 @@ export const Payment = () => {
           </form>
         </div>
       </div>
-      <div className="flex justify-center mb-2  text-xl mr-18">
-        <label className="sign-up">
+      <div className="flex justify-center mb-2  text-xl mr-18 ">
+        <label className="sign-up w-1/2 md:w-3/4 lg:w-auto items-center">
           <input type="checkbox" name="signUp" id="signUp" /> I agree to receive
           information , special offers and promotion from TEA POINT!
         </label>
@@ -125,12 +126,12 @@ export const Payment = () => {
           <hr className="mb-4" />
           <div className="flex justify-between px-4 mb-4  ">
             <p>Shipping</p>
-            {sumOfPrices < 100 ? <span>€ 15</span> : <span>-</span>}
+            {isShippingFree ? <p>Free shipping</p> : <p>€ {shippingCosts}</p>}
           </div>
           <hr className="mb-4" />
           <div className="flex justify-between px-4 mb-4 font-bold text-lg">
             <h2>Total For Your Order</h2>
-            <span>€ {sumOfPrices + 15}</span>
+            <span> €{isShippingFree ? sumOfPrices : total}</span>
           </div>
           <p>
             The total amount you pay includes all applicable customs duties &
@@ -140,6 +141,30 @@ export const Payment = () => {
         <div className="payment-form-container w-96">
           <form className="payment-form flex flex-col">
             <h1>Payment</h1>
+            <div className="flex justify-between font-bold">
+              <label className="mr-4 ">
+                <input
+                  className="m-1 "
+                  type="checkbox"
+                  value="creditCard"
+                  checked={paymentMethod === "creditCard"}
+                  onChange={() => setPaymentMethod("creditCard")}
+                />
+                Credit Card
+              </label>
+
+              <label>
+                <input
+                  className="m-1 "
+                  type="checkbox"
+                  value="debitCard"
+                  checked={paymentMethod === "debitCard"}
+                  onChange={() => setPaymentMethod("debitCard")}
+                />
+                Debit Card
+              </label>
+            </div>
+
             <lable htmlFor="card-number">Card Number:</lable>
             <input
               type="text"

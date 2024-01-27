@@ -18,12 +18,12 @@ export const OrderConfirmation = () => {
             email address.
           </p>
           <p className="pl-4 pb-2 font-medium text-base">
-            If you have any questions or need assistance, don't hesitate to send
-            us a message at contact@teapoint.com.
+            {`If you have any questions or need assistance, don't hesitate to send
+            us a message at contact@teapoint.com.`}
           </p>
           <p className="pl-4 font-medium text-base  mb-3">
-            We can't wait to welcome you back soon for another delightful
-            experience at TEA POINT!
+            {`We can't wait to welcome you back soon for another delightful
+            experience at TEA POINT!`}
           </p>
         </div>
         <img className="img w-48 m-auto" src={logo} alt="tea-point-logo" />

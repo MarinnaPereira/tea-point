@@ -1,98 +1,71 @@
-import { products } from "../data/products";
-import { useCartContext } from "../hooks/useCartContext";
-
-const teaLeaves = products.filter((product) => product.type === "teaLeaves");
-const teaWare = products.filter((product) => product.type === "teaware");
+import {NavLink} from "react-router-dom";
 
 export const Products = () => {
-  const { addProduct } = useCartContext();
-  const handleAddToCart = (product) => {
-    addProduct(product);
-  };
   return (
-    <>
-      <section>
-        <h2 className="text-[34px] text-center mt-10 font-cinzel">Tea</h2>
-        <p className="text-center text-[#5f5f5f] italic px-4">
-          Savor the essence of Asia with our exclusive single-origin teas.
-        </p>
-        <p className="text-center text-[#5f5f5f] italic px-4">
-          {`Expertly crafted to capture each region's unique character, our
-          collection reflects the artistry of skilled tea makers.`}
-        </p>
-        <div className="flex justify-center">
-          <img src="./src/assets/tea-leaves.png" />
-        </div>
-        <div className="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5 lg:px-32 md:px-24 px-12">
-          {teaLeaves.map((product) => (
-            <div key={product.id} className="relative group">
-              <img
-                src={product.productImage}
-                alt={product.productName}
-                className="w-full h-auto transition-transform duration-300 transform group-hover:scale-105"
-              />
-              <div className="absolute inset-x-0 bottom-28 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                <button
-                  className="bg-[#c0d1bd] w-full px-10 py-6 opacity-90"
-                  onClick={() => {
-                    handleAddToCart(product);
-                  }}
-                >
-                  <p className="text-white text-[23px]">Add to Cart</p>
-                </button>
-              </div>
-              <h3 className="text-[25px] pt-5">{product.productName}</h3>
-              <p className="text-[#6f6f6f] italic">{product.description}</p>
-              <p className="text-[20px]">
-                {product.price.toFixed(2)} Euro / 100g
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
+    <div className="pb-5">
+      <h2 className="text-[34px] text-center mt-10 font-cinzel">
+        Explore Our Collection
+      </h2>
+      <p className="text-xl text-center text-[#5f5f5f] italic px-4">
+        Enhance your tea rituals and discover the perfect tea time for every
+        moment.
+      </p>
 
-      <section className="pb-5">
-        <h2 className="text-[34px] text-center mt-28 font-cinzel">Teaware</h2>
-        <p className="text-center text-[#5f5f5f] italic px-4">
-          Elevate your tea experience with our meticulously crafted teaware.
-        </p>
-        <p className="text-center text-[#5f5f5f] italic px-4">
-          Indulge in a simple and mindful brewing ritual that enhances the
-          essence of each cup.
-        </p>
-        <div className="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5 lg:px-32 md:px-24 px-12">
-          {teaWare.map((product) => (
-            <div key={product.id} className="relative group">
-              <img
-                src={product.productImage}
-                alt={product.productName}
-                className="w-full h-auto transition-transform duration-300 transform group-hover:scale-105"
-              />
-              <div className="absolute inset-x-0 bottom-28 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                <button
-                  className="bg-[#c0d1bd] w-full px-10 py-6 opacity-90"
-                  onClick={() => {
-                    handleAddToCart(product);
-                  }}
-                >
-                  <p className="text-white text-[23px]">Add to Cart</p>
-                </button>
-              </div>
-              <h3 className="text-[25px] pt-5">{product.productName}</h3>
-              <p className="text-[#6f6f6f] italic">{product.description}</p>
-              {product.id.startsWith("tc") ? (
-                <p className="text-[20px]">
-                  {product.price.toFixed(2)} Euro / 1 pc
-                </p>
-              ) : product.id.startsWith("ts") ? (
-                <p className="text-[20px]">
-                  {product.price.toFixed(2)} Euro / 1 pot & 2 cups
-                </p>
-              ) : null}
-            </div>
-          ))}
+      <div className="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5 lg:px-32 md:px-24 px-12">
+        <div className="relative overflow-hidden">
+          <img
+            src="./src/assets/section1.png"
+            alt="Tea Leaves"
+            className="w-full h-auto transition-transform duration-500 transform hover:scale-110"
+          />
+          <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 bg-[#c0d1bd] bg-opacity-50 transition-opacity">
+            <NavLink to="/products/tea-leaves">
+              <button className="bg-[#41523fc0] px-10 py-10 transition-transform duration-300 transform hover:scale-110">
+                <p className="text-white text-[23px]">See more</p>
+              </button>
+            </NavLink>
+          </div>
+          <p className="absolute bottom-0 text-2xl pb-5 left-1/2 transform -translate-x-1/2">
+            Tea Leaves
+          </p>
         </div>
-      </section>
-    </>
+
+        <div className="relative overflow-hidden">
+          <img
+            src="./src/assets/section2.png"
+            alt="Teaware"
+            className="w-full h-auto transition-transform duration-500 transform hover:scale-110"
+          />
+          <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 bg-[#c0d1bd] bg-opacity-50 transition-opacity">
+            <NavLink to="/products/teaware">
+              <button className="bg-[#41523fc0] px-10 py-10 transition-transform duration-300 transform hover:scale-110">
+                <p className="text-white text-[23px]">See more</p>
+              </button>
+            </NavLink>
+          </div>
+          <p className="absolute bottom-0 text-2xl pb-5 left-1/2 transform -translate-x-1/2">
+            Teaware
+          </p>
+        </div>
+
+        <div className="relative overflow-hidden">
+          <img
+            src="./src/assets/section3.png"
+            alt="Gift Voucher"
+            className="w-full h-auto transition-transform duration-500 transform hover:scale-110"
+          />
+          <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 bg-[#c0d1bd] bg-opacity-50 transition-opacity">
+            <NavLink to="/products/voucher">
+              <button className="bg-[#41523fc0] px-10 py-10 transition-transform duration-300 transform hover:scale-110">
+                <p className="text-white text-[23px]">See more</p>
+              </button>
+            </NavLink>
+          </div>
+          <p className="absolute bottom-0 text-2xl pb-5 left-1/2 transform -translate-x-1/2">
+            Gift Voucher
+          </p>
+        </div>
+      </div>
+    </div>
   );
 };

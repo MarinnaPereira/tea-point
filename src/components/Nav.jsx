@@ -44,7 +44,7 @@ export const Nav = () => {
           </a>
           {firstLetter ? (
             <NavLink
-              to="/Logout"
+              to="/logout"
               className="transition-all ease-in-out duration-300"
             >
               <span id="first-letter" className="rounded-full">

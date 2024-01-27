@@ -26,9 +26,7 @@ export const Cart = () => {
   const isShippingFree = sumOfPrices > 100;
 
   const clickHandler = () => {
-    setHasCheckedOut((prev) => {
-      !prev;
-    });
+    setHasCheckedOut((prev) => !prev);
     if (loggedInUser) {
       navigate("/payment");
     } else {

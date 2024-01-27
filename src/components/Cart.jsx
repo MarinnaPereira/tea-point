@@ -98,14 +98,13 @@ export const Cart = () => {
                 <p className="font-semibold">
                   €{isShippingFree ? sumOfPrices : total}
                 </p>
-
               </div>
             </div>
             <div className="action ml-8 mr-4 flex justify-between items-center">
               <NavLink to={"/"} className="underline">
                 Continue shopping
               </NavLink>
-              <NavLink to="/order-confirmation">
+              <NavLink to="/payment">
                 <button className="rounded-xl px-7 py-2 text-slate-100 transition-all ease-in-out duration-300">
                   Checkout
                 </button>

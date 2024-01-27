@@ -1,8 +1,8 @@
-# TEA POINT
+## TEA POINT
 
 - TEA POINT is an e-commerce platform specializing in providing a wide variety of high-quality teas to tea enthusiasts worldwide.
 
-## Table of Contents
+### Table of Contents
 
 - Installation
 - Usage
@@ -11,9 +11,9 @@
 - Contributing
 - License
 
-## Installation
+### Installation
 
-### To get started with TEA POINT, follow these steps:
+#### To get started with TEA POINT, follow these steps:
 
 1. Clone the repository:
 
@@ -27,14 +27,14 @@
 
 - npm install
 
-## Usage
+### Usage
 
-### To run TEA POINT locally, use the following command:
+#### To run TEA POINT locally, use the following command:
 
 - npm start
 - This will start a development server, and you can view TEA POINT in your browser at - http://localhost:3000.
 
-## Features
+### Features
 
 - Homepage: Browse and explore a curated selection of teas.
 - Login/Register: Create an account or log in to access personalized features.
@@ -42,20 +42,22 @@
 - Products: View detailed information and images for each tea product.
 - Order Confirmation: Receive confirmation of your tea order.
 - Payment: Securely complete your purchase with various payment options.
-- Social Integration: Share your favorite teas on social media platforms.
+- Social Integration: Connect with us on social media
+- Newsletter Subscription: Subscribe to our newsletter for updates and promotions.
 - 404 Not Found Page: Custom page for handling invalid routes.
 
 ### Dependencies
 
-- TEA POINT relies on the following dependencies:
+TEA POINT relies on the following dependencies:
 
-* react: JavaScript library for building user interfaces.
-* react-router-dom: Declarative routing for React applications.
-* other-dependency: Brief description of the dependency and its functionality.
+- [react](https://reactjs.org/): JavaScript library for building user interfaces.
+- [react-router-dom](https://reactrouter.com/web/guides/quick-start): Declarative routing for React applications.
+- [Tailwind CSS](https://tailwindcss.com/): A utility-first CSS framework for rapidly building custom designs.
+- [react-icons/fa](https://react-icons.github.io/react-icons/): FontAwesome icons made available as React components.
 
-## Contributing
+### Contributing
 
-### We welcome contributions to improve TEA POINT! To contribute, follow these steps:
+#### We welcome contributions to improve TEA POINT! To contribute, follow these steps:
 
 1. Fork the repository.
 2. Create a new branch (git checkout -b feature/improvement).
@@ -64,4 +66,4 @@
 5. Push to the branch (git push origin feature/improvement).
 6. Create a new Pull Request.
 
-## License
+### License

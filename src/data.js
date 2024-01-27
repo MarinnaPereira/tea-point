@@ -13,12 +13,18 @@ import tea12 from "./assets/tea12.jpg";
 import cup1 from "./assets/cup1.jpg";
 import cup2 from "./assets/cup2.jpg";
 import cup3 from "./assets/cup3.jpg";
+import cup4 from "./assets/cup4.jpg";
+import cup5 from "./assets/cup5.jpg";
+import cup6 from "./assets/cup6.jpg";
 import set1 from "./assets/set1.jpg";
 import set2 from "./assets/set2.jpg";
 import set3 from "./assets/set3.jpg";
 import set4 from "./assets/set4.jpg";
 import set5 from "./assets/set5.jpg";
 import set6 from "./assets/set6.jpg";
+import voucher1 from "./assets/voucher1.jpg";
+import voucher2 from "./assets/voucher2.jpg";
+import voucher3 from "./assets/voucher3.jpg";
 
 export const products = [
   {
@@ -140,10 +146,10 @@ export const products = [
   {
     id: "tc-2",
     type: "teaware",
-    productName: "Tea Cup - Elegant",
+    productName: "Tea Cup - Romance",
     price: 51.9,
     productImage: cup2,
-    description: "Indulge in sophistication",
+    description: "Taste of sweet moments",
   },
   {
     id: "tc-3",
@@ -151,7 +157,31 @@ export const products = [
     productName: "Tea Cup - Joy",
     price: 38.9,
     productImage: cup3,
-    description: "Savor the sweetness of happiness",
+    description: "delight of happiness",
+  },
+  {
+    id: "tc-4",
+    type: "teaware",
+    productName: "Tea Cup - Reflection",
+    price: 41.9,
+    productImage: cup4,
+    description: "Timeless allure",
+  },
+  {
+    id: "tc-5",
+    type: "teaware",
+    productName: "Tea Cup - Kyoto",
+    price: 51.9,
+    productImage: cup5,
+    description: "Journey back in time",
+  },
+  {
+    id: "tc-6",
+    type: "teaware",
+    productName: "Tea Cup - Elegance",
+    price: 50.9,
+    productImage: cup6,
+    description: "Indulge in sophistication",
   },
   {
     id: "ts-1",
@@ -194,11 +224,35 @@ export const products = [
     description: "Fascinating journey",
   },
   {
-    id: "ts-6",
+    id: "vo-6",
     type: "teaware",
     productName: "Tea Set - Oasis",
     price: 230.9,
     productImage: set6,
     description: "Serene moments of life",
+  },
+  {
+    id: "vo-1",
+    type: "voucher",
+    productName: "Voucher 50",
+    price: 50.0,
+    productImage: voucher1,
+    description: "Sip and save on your favorite teas",
+  },
+  {
+    id: "vo-2",
+    type: "voucher",
+    productName: "Voucher 100",
+    price: 100.0,
+    productImage: voucher2,
+    description: "Elevate your tea moments with us",
+  },
+  {
+    id: "vo-3",
+    type: "voucher",
+    productName: "Voucher 200",
+    price: 200.0,
+    productImage: voucher3,
+    description: "Explore premium blends on us",
   },
 ];

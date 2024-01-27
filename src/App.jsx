@@ -11,6 +11,9 @@ import { Footer } from "./components/Footer";
 import "./App.css";
 import { Products } from "./components/Products";
 import Payment from "./components/Payment";
+import TeaLeaves from "./components/products/TeaLeaves";
+import Teaware from "./components/products/Teaware";
+import Voucher from "./components/products/Voucher";
 
 function App() {
   return (
@@ -22,6 +25,9 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/products/tea-leaves" element={<TeaLeaves />} />
+        <Route path="/products/teaware" element={<Teaware />} />
+        <Route path="/products/voucher" element={<Voucher />} />
         <Route path="/order-confirmation" element={<OrderConfirmation />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="*" element={<NotFound />} />

@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import "../scss/Payment.scss";
 import { NavLink } from "react-router-dom";
 import { useCartContext } from "../hooks/useCartContext";
+import cardPayment from "../assets/cardPayment.jpg";
+import paypalImg from "../assets/paypal.png";
+// import { FaPaypal } from "react-icons/fa";
 
 export const Payment = () => {
   const { sumOfPrices, shippingCosts, total, setHasCheckedOut, emptyCart } =
@@ -13,8 +16,6 @@ export const Payment = () => {
     setHasCheckedOut((prev) => !prev);
   }, []);
 
-  const [paymentMethod, setPaymentMethod] = useState("");
-
   const handlePayment = () => {
     emptyCart();
     alert("Payment successful! Thank you for your purchase. ");
@@ -22,39 +23,88 @@ export const Payment = () => {
 
   const [addressState, setAddressState] = useState(false);
 
+  const [paymentMethod, setPaymentMethod] = useState("");
+
   return (
     <div>
       <div className="flex gap-10 flex-wrap address-forms">
         <div>
           <form className="billing-address-form w-96 ">
             <h1>Billing Address</h1>
-            <label htmlFor="first-name">First Name</label>
+            <label
+              htmlFor="first-name"
+              className="after:content-['*'] after:ml-0.5 after:text-red-500"
+            >
+              First Name
+            </label>
             <input type="text" id="first-name" />
 
-            <label htmlFor="last-name">Last Name</label>
+            <label
+              className="after:content-['*'] after:ml-0.5 after:text-red-500"
+              htmlFor="last-name"
+            >
+              Last Name
+            </label>
             <input type="text" id="last-name" />
 
-            <label htmlFor="email"> Email</label>
+            <label
+              className="after:content-['*'] after:ml-0.5 after:text-red-500"
+              htmlFor="email"
+            >
+              {" "}
+              Email
+            </label>
             <input type="email" id="email" />
 
-            <label htmlFor="county">Country</label>
+            <label
+              className="after:content-['*'] after:ml-0.5 after:text-red-500"
+              htmlFor="county"
+            >
+              Country
+            </label>
             <select name="" id="county">
               <option value=""> Germany</option>
             </select>
 
-            <label htmlFor="address-1">Address Line 1</label>
+            <label
+              className="after:content-['*'] after:ml-0.5 after:text-red-500"
+              htmlFor="address-1"
+            >
+              Address Line 1
+            </label>
             <input type="text , number" id="address-1" />
 
-            <label htmlFor="address-2">Address Line 2</label>
+            <label
+              className="after:content-['*'] after:ml-0.5 after:text-red-500"
+              htmlFor="address-2"
+            >
+              Address Line 2
+            </label>
             <input type="text" id="address-2" />
 
-            <label htmlFor="city">City</label>
+            <label
+              className="after:content-['*'] after:ml-0.5 after:text-red-500"
+              htmlFor="city"
+            >
+              City
+            </label>
             <input type="text" id="city" />
 
-            <label htmlFor="postcode">Zip / Postcode</label>
+            <label
+              className="after:content-['*'] after:ml-0.5 after:text-red-500"
+              htmlFor="postcode"
+            >
+              Zip / Postcode
+            </label>
             <input type="number" id="postcode" />
 
-            <label htmlFor="mobile-phone"> Mobile Phone</label>
+            <label
+              className="after:content-['*'] after:ml-0.5 after:text-red-500"
+              htmlFor="mobile-phone"
+            >
+              {" "}
+              Mobile Phone
+            </label>
             <input type="number" id="mobile-phone" />
           </form>
         </div>
@@ -78,30 +128,71 @@ export const Payment = () => {
             </select>
             {addressState && (
               <>
-                <label htmlFor="first-name">First Name</label>
+                <label
+                  className="after:content-['*'] after:ml-0.5 after:text-red-500"
+                  htmlFor="first-name"
+                >
+                  First Name
+                </label>
                 <input type="text" id="first-name" />
 
-                <label htmlFor="last-name">Last Name</label>
+                <label
+                  className="after:content-['*'] after:ml-0.5 after:text-red-500"
+                  htmlFor="last-name"
+                >
+                  Last Name
+                </label>
                 <input type="text" id="last-name" />
 
-                <label htmlFor="county">Country</label>
+                <label
+                  className="after:content-['*'] after:ml-0.5 after:text-red-500"
+                  htmlFor="county"
+                >
+                  Country
+                </label>
                 <select name="" id="county">
                   <option value=""> Germany</option>
                 </select>
 
-                <label htmlFor="address-1">Address Line 1</label>
+                <label
+                  className="after:content-['*'] after:ml-0.5 after:text-red-500"
+                  htmlFor="address-1"
+                >
+                  Address Line 1
+                </label>
                 <input type="text , number" id="address-1" />
 
-                <label htmlFor="address-2">Address Line 2</label>
+                <label
+                  className="after:content-['*'] after:ml-0.5 after:text-red-500"
+                  htmlFor="address-2"
+                >
+                  Address Line 2
+                </label>
                 <input type="text" id="address-2" />
 
-                <label htmlFor="city">City</label>
+                <label
+                  className="after:content-['*'] after:ml-0.5 after:text-red-500"
+                  htmlFor="city"
+                >
+                  City
+                </label>
                 <input type="text" id="city" />
 
-                <label htmlFor="postcode">Zip / Postcode</label>
+                <label
+                  className="after:content-['*'] after:ml-0.5 after:text-red-500"
+                  htmlFor="postcode"
+                >
+                  Zip / Postcode
+                </label>
                 <input type="number" id="postcode" />
 
-                <label htmlFor="mobile-phone"> Mobile Phone</label>
+                <label
+                  className="after:content-['*'] after:ml-0.5 after:text-red-500"
+                  htmlFor="mobile-phone"
+                >
+                  {" "}
+                  Mobile Phone
+                </label>
                 <input type="number" id="mobile-phone" />
               </>
             )}
@@ -140,45 +231,96 @@ export const Payment = () => {
           <form className="payment-form flex flex-col">
             <h1>Payment</h1>
             <div className="flex justify-between font-bold">
-              <label className="mr-4 ">
+              <label className="border-b-4 ">
                 <input
                   className="m-1 "
                   type="checkbox"
-                  value="creditCard"
-                  checked={paymentMethod === "creditCard"}
-                  onChange={() => setPaymentMethod("creditCard")}
+                  value="cardPayment"
+                  checked={paymentMethod === "cardPayment"}
+                  onChange={() => setPaymentMethod("cardPayment")}
                 />
-                Credit Card
+                Credit / Debit Card
               </label>
+            </div>
 
+            {paymentMethod === "cardPayment" && (
+              <>
+                <label htmlFor="">
+                  <img
+                    className="w-32 object-contain"
+                    src={cardPayment}
+                    alt=""
+                  />
+                </label>
+
+                <label htmlFor="card-holder">Card Holder:</label>
+                <input type="text" id="card-holder" />
+
+                <label htmlFor="card-number">Card Number:</label>
+                <input
+                  type="text"
+                  id="card-number"
+                  placeholder="Enter card number"
+                />
+
+                <label htmlFor="expiry-date">Expiry Date:</label>
+                <input
+                  type="text"
+                  id="expiry-date"
+                  pattern="(0[1-9]|1[0-2])\/\d{2}"
+                  placeholder="MM/YY"
+                  className="w-1/2"
+                />
+
+                <label htmlFor="cvv"> Security code:</label>
+                <input
+                  type="text"
+                  id="cvv"
+                  placeholder="CVV"
+                  className="w-1/2"
+                />
+              </>
+            )}
+            <div className="flex justify-between mt-4">
               <label>
                 <input
                   className="m-1 "
                   type="checkbox"
-                  value="debitCard"
-                  checked={paymentMethod === "debitCard"}
-                  onChange={() => setPaymentMethod("debitCard")}
+                  value="paypal"
+                  checked={paymentMethod === "paypal"}
+                  onChange={() => setPaymentMethod("paypal")}
                 />
-                Debit Card
+                PayPal
               </label>
+              {/* <FaPaypal className="text-2xl text-blue-600" /> */}
             </div>
 
-            <label htmlFor="card-number">Card Number:</label>
-            <input
-              type="text"
-              id="card-number"
-              placeholder="Enter card number"
-            />
+            {paymentMethod === "paypal" && (
+              <div className="border-2">
+                <div>
+                  <img src={paypalImg} className="w-24 ml-8" alt="" />
+                </div>
+                <p className="ml-8 my-4 text-xl">Log In To PayPal</p>
+                <label htmlFor="paypal-email">
+                  <input
+                    className="paypal-input p-1.5 "
+                    type="email"
+                    id="paypal-email"
+                    placeholder="Email address"
+                  />
+                </label>
+                <label htmlFor="paypal-password">
+                  <input
+                    className="paypal-input p-1.5 "
+                    type="password"
+                    id="paypal-password"
+                    placeholder="Password"
+                  />
+                </label>
+                <button className="paypal-button w-80">Log In</button>
+              </div>
+            )}
 
-            <label htmlFor="expiry-date">Expiry Date:</label>
-            <input type="date" id="expiry-date" placeholder="MM/YYYY" />
-
-            <label htmlFor="cvv"> Security code:</label>
-            <input
-              type="text"
-              id="cvv"
-              placeholder="Enter 3 digit cvv number"
-            />
             <NavLink to="/order-confirmation">
               {" "}
               <button onClick={handlePayment}>Pay and place order</button>

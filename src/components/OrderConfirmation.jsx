@@ -1,8 +1,13 @@
+import { useEffect } from "react";
 import logo from "../assets/logo.png";
 // import logo from "../assets/logo-bg-transparent.png";
 import "../scss/OrderConfirmation.scss";
 
 export const OrderConfirmation = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="confirmation-container flex justify-center items-center">
       <div className="message rounded overflow-hidden">

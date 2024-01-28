@@ -11,9 +11,9 @@ export const Login = () => {
   const passwordInput = useRef(null);
   const [error, setError] = useState(null);
   const [showPassword, setShowPassword] = useState(false);
-  const navigate = useNavigate();
   const { usersState, setFirstLetter, setLoggedInUser } = useUsersContext();
   const { hasCheckedOut } = useCartContext();
+  const navigate = useNavigate();
   console.log(usersState);
 
   const clickHandler = () => {

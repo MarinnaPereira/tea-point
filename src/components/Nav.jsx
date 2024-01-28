@@ -26,7 +26,7 @@ export const Nav = () => {
       <div className="container mx-auto grid grid-cols-3 items-center gap-4">
         <div></div>
         <div className="text-center">
-          <NavLink to={"/"} exact onClick={handleTeaPointClick}>
+          <NavLink to={"/"} exact="true" onClick={handleTeaPointClick}>
             <span className="tracking-tight brand transition-all ease-in-out duration-300">
               TEA POINT
             </span>
@@ -44,7 +44,7 @@ export const Nav = () => {
           </a>
           {firstLetter ? (
             <NavLink
-              to="/Logout"
+              to="/logout"
               className="transition-all ease-in-out duration-300"
             >
               <span id="first-letter" className="rounded-full">

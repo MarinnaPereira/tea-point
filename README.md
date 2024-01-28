@@ -41,10 +41,10 @@ npm install
 ### To run TEA POINT locally, use the following command
 
 ```bash
-npm start
+npm run dev
 ```
 
-This will start a development server, and you can view TEA POINT in your browser at - http://localhost:3000.
+This will start a development server, and you can view TEA POINT in your browser at - http://localhost:5174.
 
 ## Features
 
@@ -53,6 +53,9 @@ This will start a development server, and you can view TEA POINT in your browser
 
 - **Login/Register**  
   Create an account or log in to access personalized features.
+
+- **Logout**  
+  Log out from your account to ensure security.
 
 - **Cart**  
   Add tea products to your cart for easy checkout.
@@ -71,6 +74,9 @@ This will start a development server, and you can view TEA POINT in your browser
 
 - **Newsletter Subscription**  
   Subscribe to our newsletter for updates and promotions.
+
+- **Email Contact**
+  Get in touch if you have any questions or need assistance.
 
 - **404 Not Found Page**  
   Custom page for handling invalid routes.
@@ -94,8 +100,8 @@ This will start a development server, and you can view TEA POINT in your browser
 - [**React Icons**](https://react-icons.github.io/react-icons/)  
   A popular icon library made available as React components.
 
-- [**React Lottie**](https://www.npmjs.com/package/react-lottie)  
-  A library for adding Lottie animations to React projects.
+- [**Sass**](https://sass-lang.com/)  
+  A popular CSS extension language.
 
 ## Contributing
 

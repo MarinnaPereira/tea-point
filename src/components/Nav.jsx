@@ -1,15 +1,25 @@
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useCartContext } from "../hooks/useCartContext";
 import { useUsersContext } from "../hooks/useUsersContext";
-// import { FaLeaf } from "react-icons/fa";
+import { FaStore } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
 import { FaShoppingBasket } from "react-icons/fa";
 import { FaRegUser } from "react-icons/fa";
 import "../scss/Nav.scss";
 
 export const Nav = () => {
-  const { amountOfProducts } = useCartContext();
+  const [showIcons, setShowIcons] = useState(false);
   const { firstLetter } = useUsersContext();
+  const { amountOfProducts } = useCartContext();
+
+  const toggleHandler = () => {
+    setShowIcons((prev) => !prev);
+  };
+
+  const handleTeaPointClick = () => {
+    window.scrollTo(0, 0);
+  };
 
   const emailClickHandler = () => {
     const recipient = "contact@teapoint.com";
@@ -17,25 +27,42 @@ export const Nav = () => {
     window.location.href = mailtoLink;
   };
 
-  const handleTeaPointClick = () => {
-    window.scrollTo(0, 0);
-  };
-
   return (
     <nav className="p-4 text-3xl">
       <div className="container mx-auto grid grid-cols-3 items-center gap-4">
-        <div></div>
-        <div className="text-center">
+        <div className="text-center col-start-2">
           <NavLink to={"/"} exact="true" onClick={handleTeaPointClick}>
             <span className="tracking-tight brand transition-all ease-in-out duration-300">
               TEA POINT
             </span>
           </NavLink>
+        </div>{" "}
+        <div className=" flex justify-end pr-2 md:pr-1 lg:hidden">
+          <button
+            onClick={toggleHandler}
+            className="toggle flex rounded px-3 py-2"
+          >
+            <svg
+              className="fill-current h-3 w-3"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>Menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+            </svg>
+          </button>{" "}
         </div>
         <div
-          id="icons-div"
-          className="flex gap-5 md:gap-10 text-xl md:text-2xl"
+          className={`icons-div row-start-2 col-start-2 lg:row-start-1 lg:col-start-3 flex justify-center gap-5 md:gap-10 text-xl md:text-2xl ${
+            !showIcons && "hidden lg:flex"
+          }`}
         >
+          <NavLink
+            to="/products"
+            className="transition-all ease-in-out duration-300"
+          >
+            <FaStore title="store" />
+          </NavLink>
           <a
             onClick={emailClickHandler}
             className="transition-all ease-in-out duration-300"

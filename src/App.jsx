@@ -12,9 +12,9 @@ import { Footer } from "./components/Footer";
 import { Products } from "./components/Products";
 import { Payment } from "./components/Payment";
 import "./App.css";
-import TeaLeaves from "./components/products/TeaLeaves";
-import Teaware from "./components/products/Teaware";
-import Voucher from "./components/products/Voucher";
+import { TeaLeaves } from "./components/products/TeaLeaves";
+import { Teaware } from "./components/products/Teaware";
+import { Voucher } from "./components/products/Voucher";
 
 function App() {
   return (

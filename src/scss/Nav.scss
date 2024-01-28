@@ -5,10 +5,19 @@ nav {
       color: #cbd7c9;
     }
   }
-  #icons-div {
+  .toggle {
+    border: 1px solid #41523fc0;
+
+    &:hover {
+      color: #c0d1bd;
+      border-color: #c0d1bd;
+      cursor: pointer;
+    }
+  }
+  .icons-div {
     a {
       &.active {
-        color: #9ca69a;
+        color: #bcbbb1;
       }
       &:hover {
         color: #c0d1bd;

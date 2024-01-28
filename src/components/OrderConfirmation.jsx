@@ -12,7 +12,7 @@ export const OrderConfirmation = () => {
     <div className="confirmation-container flex justify-center items-center">
       <div className="message rounded overflow-hidden">
         <div className="text pb-4">
-          <h1 className="pl-4 heading font-bold text-xl mb-3">
+          <h1 className="heading pl-4 heading font-bold text-xl mb-3">
             Thank you for choosing TEA POINT!
           </h1>
           <p className="pl-4 pb-2 font-medium text-base">

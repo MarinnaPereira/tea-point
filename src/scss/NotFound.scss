@@ -1,28 +1,19 @@
-.notfound-container {
-  display: flex;
-  flex-direction: column;
-  padding-left: 2rem;
-  padding-bottom: 5rem;
-
+.not-found-container {
+  width: 800px;
+  @media screen and (max-width: 567px) {
+    width: 480px;
+  }
   div {
-    margin: auto;
-    margin-top: 5rem;
-
-    p {
-      margin-bottom: 5rem;
-    }
     h1 {
-      font-size: 2rem;
-      margin-bottom: 2rem;
+      letter-spacing: 0.03rem;
     }
     div {
       img {
-        width: 400px;
-        object-fit: contain;
+        width: 360px;
+        object-fit: cover;
       }
       h2 {
-        text-shadow: 1px 1px 1px #41523fc0;
-        font-size: 1.3rem;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
         &:hover {
           transform: scale(0.9);
         }

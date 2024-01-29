@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import goHomeImg from "../assets/opt4.jpg";
 import goStoreImg from "../assets/goStore.jpg";
 import "../scss/NotFound.scss";
+
 export const NotFound = () => {
   return (
     <div className="not-found-container m-auto flex flex-col pb-10">

@@ -6,8 +6,8 @@ import "../scss/Subnav.scss";
 
 export const Subnav = () => {
   return (
-    <div id="subnav" className="w-full hidden lg:block">
-      <div className="icons-container w-14 h-40 p-4 rounded-full flex-col text-2xl gap-5 flex items-center justify-center">
+    <div id="subnav" className="w-full hidden lg:block ">
+      <div className="icons-container w-14 h-52 rounded-full flex-col text-3xl gap-10 flex items-center justify-center">
         <NavLink
           to="/products/tea-leaves"
           className="transition-all ease-in-out duration-300"

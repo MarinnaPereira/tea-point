@@ -1,6 +1,6 @@
 /* eslint-disable no-case-declarations */
 export const productReducer = (state, action) => {
-  console.log(state);
+  // console.log(state);
   switch (action.type) {
     case "ADD":
       const checkProductExists = state.find(

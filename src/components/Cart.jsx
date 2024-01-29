@@ -1,9 +1,9 @@
-import { FaRegTrashAlt } from "react-icons/fa";
+import { useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useCartContext } from "../hooks/useCartContext";
-import "../scss/Cart.scss";
 import { useUsersContext } from "../hooks/useUsersContext";
-import { useEffect } from "react";
+import { FaRegTrashAlt } from "react-icons/fa";
+import "../scss/Cart.scss";
 
 export const Cart = () => {
   const navigate = useNavigate();

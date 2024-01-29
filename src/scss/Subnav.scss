@@ -1,11 +1,10 @@
 #subnav {
   color: #94ad90;
   position: fixed;
-  top: 40%;
+  top: 38%;
   left: 1.6%;
   .icons-container {
     background-color: #ffffff;
-    // background-color: #f6f5f3;
     box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.069);
     a {
       &.active {

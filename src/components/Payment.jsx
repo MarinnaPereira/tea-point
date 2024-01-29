@@ -390,7 +390,9 @@ export const Payment = () => {
                     <img src={paypalImg} className="w-28 " alt="paypal-logo" />{" "}
                     <div className="flex gap-2 items-center ">
                       <FaShoppingCart className="text-gray-500" />
-                      <p className="text-gray-500"> 0.00</p>
+                      <p className="text-gray-500">
+                        €{isShippingFree ? sumOfPrices : total}
+                      </p>
                     </div>
                   </div>
                   <p className=" my-4 text-xl">Log In To PayPal</p>

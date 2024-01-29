@@ -17,10 +17,6 @@ export const Nav = () => {
     setShowIcons((prev) => !prev);
   };
 
-  const handleTeaPointClick = () => {
-    window.scrollTo(0, 0);
-  };
-
   const emailClickHandler = () => {
     const recipient = "contact@teapoint.com";
     const mailtoLink = `mailto:${recipient}`;
@@ -31,7 +27,7 @@ export const Nav = () => {
     <nav className="p-4 text-3xl">
       <div className="container mx-auto grid grid-cols-3 items-center gap-4">
         <div className="text-center col-start-2">
-          <NavLink to={"/"} exact="true" onClick={handleTeaPointClick}>
+          <NavLink to={"/"} exact="true">
             <span className="tracking-tight brand transition-all ease-in-out duration-300">
               TEA POINT
             </span>

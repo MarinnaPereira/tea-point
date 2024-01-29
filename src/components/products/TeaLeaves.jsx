@@ -1,6 +1,5 @@
-import { useEffect } from "react";
-import { products } from "../../data/products";
 import { useCartContext } from "../../hooks/useCartContext";
+import { products } from "../../data/products";
 import { Subnav } from "../Subnav";
 
 const teaLeaves = products.filter((product) => product.type === "teaLeaves");
@@ -10,10 +9,6 @@ export const TeaLeaves = () => {
   const handleAddToCart = (product) => {
     addProduct(product);
   };
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   return (
     <section>

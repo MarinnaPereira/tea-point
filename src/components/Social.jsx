@@ -1,8 +1,8 @@
+import { useRef } from "react";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa";
 import "../scss/Social.scss";
-import { useRef } from "react";
 
 export const Social = () => {
   const emailInput = useRef();
@@ -12,6 +12,7 @@ export const Social = () => {
     emailInput.current.value = "";
     alert("Email successfully registered!");
   };
+
   return (
     <section className="social p-8">
       <div className="flex justify-center gap-6 text-2xl mb-7">

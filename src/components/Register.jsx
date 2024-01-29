@@ -17,7 +17,7 @@ export const Register = () => {
     e.preventDefault();
     setError(null);
     setSuccessfullyRegistered("");
-    console.log(usersState);
+    // console.log(usersState);
 
     const currentData = {
       firstName: firstNameInput.current.value.trim(),

@@ -1,4 +1,4 @@
-import {NavLink} from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 
 export const Products = () => {
   return (
@@ -66,6 +66,7 @@ export const Products = () => {
           </p>
         </div>
       </div>
+      {/* <Outlet /> */}
     </div>
   );
 };

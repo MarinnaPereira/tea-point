@@ -1,10 +1,11 @@
 .payment-container {
   width: 1050px;
-  @media screen and (max-width: 567px) {
-    width: 480px;
-  }
+
   .billing-address-form,
   .delivery-address-form {
+    @media screen and (max-width: 567px) {
+      width: 300px;
+    }
     h1 {
       background-color: #94ad90;
       color: #fefefe;
@@ -17,6 +18,9 @@
 }
 
 .method-container {
+  @media screen and (max-width: 567px) {
+    width: 300px;
+  }
   h1 {
     background-color: #94ad90;
     color: #fefefe;

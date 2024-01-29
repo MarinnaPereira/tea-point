@@ -1,16 +1,16 @@
-import {useEffect, useState} from "react";
-import {NavLink} from "react-router-dom";
-import {useCartContext} from "../hooks/useCartContext";
+import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
+import { useCartContext } from "../hooks/useCartContext";
 import cardPayment from "../assets/cardPayment.png";
 import paypalImg from "../assets/paypal.png";
-import {FaShoppingCart} from "react-icons/fa";
+import { FaShoppingCart } from "react-icons/fa";
 import "../scss/Payment.scss";
 
 export const Payment = () => {
   const [addressState, setAddressState] = useState(false);
   const [paymentMethod, setPaymentMethod] = useState("");
 
-  const {sumOfPrices, shippingCosts, total, setHasCheckedOut, emptyCart} =
+  const { sumOfPrices, shippingCosts, total, setHasCheckedOut, emptyCart } =
     useCartContext();
 
   const isShippingFree = sumOfPrices > 100;

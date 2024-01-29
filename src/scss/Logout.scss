@@ -1,6 +1,11 @@
 #logout-container {
   #logout {
     width: 380px;
+
+    @media screen and (max-width: 567px) {
+      width: 310px;
+    }
+
     .form-heading {
       background-color: #ecf1eb;
     }

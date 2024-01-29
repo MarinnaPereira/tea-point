@@ -36,6 +36,10 @@ nav {
       font-size: 1.3rem;
       background-color: rgba(65, 82, 63, 0.753);
       color: whitesmoke;
+      @media screen and (max-width: 767px) {
+        font-size: 1rem;
+        padding: 8px;
+      }
       &:hover {
         background-color: #c0d1bd;
         color: rgba(65, 82, 63, 0.753);

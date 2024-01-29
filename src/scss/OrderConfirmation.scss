@@ -2,11 +2,17 @@
   height: 90vh;
   background-image: url("../assets/order-confirmation.jpg");
   background-position: center;
+  @media screen and (max-width: 567px) {
+    height: fit-content;
+  }
   .message {
     width: 600px;
     background-color: rgba(252, 252, 252, 0.463);
     padding: 20px;
     border-radius: 10px;
+    @media screen and (max-width: 667px) {
+      border-radius: 0;
+    }
     backdrop-filter: blur(5px);
     .heading {
       letter-spacing: 0.03rem;

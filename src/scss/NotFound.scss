@@ -1,7 +1,7 @@
 .not-found-container {
   width: 800px;
   @media screen and (max-width: 567px) {
-    width: 480px;
+    max-width: 350px;
   }
   div {
     h1 {

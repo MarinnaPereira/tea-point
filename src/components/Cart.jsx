@@ -116,13 +116,13 @@ export const Cart = () => {
                 </p>
               </div>
             </div>
-            <div className="action ml-8 mr-4 flex justify-between items-center">
+            <div className="flex-col-reverse md:flex-row action ml-8 mr-4 flex justify-between items-center">
               <NavLink to={"/products"} className="underline">
                 Continue shopping
               </NavLink>
               <button
                 onClick={clickHandler}
-                className="rounded-xl px-7 py-2 text-slate-100 transition-all ease-in-out duration-300"
+                className="rounded-xl px-7 py-2 text-slate-100 transition-all ease-in-out duration-300 mb-5 md:mb-0"
               >
                 Checkout
               </button>

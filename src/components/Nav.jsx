@@ -63,14 +63,14 @@ export const Nav = () => {
             onClick={emailClickHandler}
             className="transition-all ease-in-out duration-300"
           >
-            <FaEnvelope />
+            <FaEnvelope title="contact" />
           </a>
           {firstLetter ? (
             <NavLink
               to="/logout"
               className="transition-all ease-in-out duration-300"
             >
-              <span id="first-letter" className="rounded-full">
+              <span id="first-letter" className="rounded-full" title="logout">
                 {firstLetter}
               </span>
             </NavLink>
@@ -79,7 +79,7 @@ export const Nav = () => {
               to={"/login"}
               className="transition-all ease-in-out duration-300"
             >
-              <FaRegUser />
+              <FaRegUser title="login" />
             </NavLink>
           )}
 
@@ -88,7 +88,7 @@ export const Nav = () => {
             className="transition-all ease-in-out duration-300"
           >
             <div>
-              <FaShoppingBasket />
+              <FaShoppingBasket title="basket" />
             </div>
           </NavLink>
           {amountOfProducts > 0 && (

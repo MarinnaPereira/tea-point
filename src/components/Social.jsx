@@ -20,9 +20,6 @@ export const Social = () => {
           href="https://www.instagram.com/"
           target="_blank"
           rel="noreferrer"
-          onClick={(e) => {
-            e.preventDefault();
-          }}
           className="transition-all ease-in-out duration-300"
         >
           <FaInstagram />
@@ -31,9 +28,6 @@ export const Social = () => {
           href="https://www.facebook.com/"
           target="_blank"
           rel="noreferrer"
-          onClick={(e) => {
-            e.preventDefault();
-          }}
           className="transition-all ease-in-out duration-300"
         >
           <FaFacebook />
@@ -42,9 +36,6 @@ export const Social = () => {
           href="https://www.tiktok.com/en/"
           target="_blank"
           rel="noreferrer"
-          onClick={(e) => {
-            e.preventDefault();
-          }}
           className="transition-all ease-in-out duration-300"
         >
           <FaTiktok />

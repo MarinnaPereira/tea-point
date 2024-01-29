@@ -14,7 +14,7 @@ export const Login = () => {
   const { usersState, setFirstLetter, setLoggedInUser } = useUsersContext();
   const { hasCheckedOut } = useCartContext();
   const navigate = useNavigate();
-  console.log(usersState);
+  // console.log(usersState);
 
   const clickHandler = () => {
     setShowPassword((prev) => !prev);

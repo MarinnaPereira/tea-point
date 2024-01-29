@@ -15,7 +15,7 @@ export const Social = () => {
 
   return (
     <section className="social p-8">
-      <div className="flex justify-center gap-6 text-2xl mb-7">
+      <div className="flex justify-center gap-6 text-2xl mb-5">
         <a
           href="https://www.instagram.com/"
           target="_blank"
@@ -47,15 +47,15 @@ export const Social = () => {
         </label>
         <form onSubmit={clickHandler}>
           <input
-            className="border border-grey-700 rounded-full py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white text-center"
             id="email"
+            className="w-full md:w-auto rounded-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline text-center mb-4"
             type="email"
             placeholder="your email"
             required
             ref={emailInput}
           />
           <button
-            className="text-white py-2 px-4 rounded-full block mx-auto transition-all ease-in-out duration-300"
+            className="text-white sm-w-full py-2 px-4 rounded-full block mx-auto transition-all ease-in-out duration-300"
             id="btn-subscribe"
             type="submit"
           >

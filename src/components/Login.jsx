@@ -86,10 +86,10 @@ export const Login = () => {
               {showPassword ? <FaEye /> : <FaEyeSlash />}
             </span>
           </div>
-          <div className="flex justify-between items-center py-5">
+          <div className="flex flex-col md:flex-row justify-between items-center py-5">
             <button
               type="submit"
-              className="rounded-xl px-6 py-2 text-slate-100 transition-all ease-in-out duration-300"
+              className="rounded-xl px-6 py-2 text-slate-100 transition-all ease-in-out duration-300 mb-5 md:mb-0"
             >
               Login
             </button>

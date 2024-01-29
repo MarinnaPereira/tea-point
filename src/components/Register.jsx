@@ -116,8 +116,8 @@ export const Register = () => {
             <input type="checkbox" name="signUp" id="signUp" /> I want to sign
             up to receive exclusive promotions and benefits from Tea Point!
           </label>
-          <div className="flex justify-between items-center py-5">
-            <button className="rounded-xl px-6 py-2 text-slate-100 transition-all ease-in-out duration-300">
+          <div className="flex flex-col md:flex-row justify-between items-center py-5">
+            <button className="rounded-xl px-6 py-2 text-slate-100 transition-all ease-in-out duration-300 mb-5 md:mb-0">
               Create account
             </button>
             <NavLink to={"/login"} className="text-form underline">

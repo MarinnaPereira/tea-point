@@ -1,11 +1,12 @@
-import {useCartContext} from "../../hooks/useCartContext";
-import {products} from "../../data/products";
-import {Subnav} from "../Subnav";
+import { useCartContext } from "../../hooks/useCartContext";
+import { products } from "../../data/products";
+import { Subnav } from "../Subnav";
+import teaLeaves from "../../assets/tea-leaves.png";
 
 const teaLeaves = products.filter((product) => product.type === "teaLeaves");
 
 export const TeaLeaves = () => {
-  const {addProduct} = useCartContext();
+  const { addProduct } = useCartContext();
   const handleAddToCart = (product) => {
     addProduct(product);
   };
@@ -23,7 +24,7 @@ export const TeaLeaves = () => {
       collection reflects the artistry of skilled tea makers.`}
         </p>
         <div className="flex justify-center">
-          <img className="w-[75%]" src="../src/assets/tea-leaves.png" />
+          <img className="w-[75%]" src={teaLeaves} />
         </div>
         <div className="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mb-5 lg:px-32 md:px-24 px-12">
           {teaLeaves.map((product) => (

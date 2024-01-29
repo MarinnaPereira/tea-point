@@ -1,5 +1,7 @@
 import { NavLink } from "react-router-dom";
-import sectionone from "../assets/sectionone.png";
+import section1 from "../assets/section1.png";
+import section2 from "../assets/section2.png";
+import section3 from "../assets/section3.png";
 
 export const Products = () => {
   return (
@@ -14,7 +16,7 @@ export const Products = () => {
 
       <div className="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5 lg:px-32 md:px-24 px-12">
         <div className="relative overflow-hidden">
-          <img src={sectionone} alt="Tea Leaves" className="w-full h-auto" />
+          <img src={section1} alt="Tea Leaves" className="w-full h-auto" />
           <div className="absolute inset-0 flex items-center justify-center lg:opacity-0 lg:hover:opacity-100 lg:bg-[#c0d1bd] lg:bg-opacity-50 lg:transition-opacity">
             <NavLink to="/products/tea-leaves">
               <button className="bg-[#41523fc0] px-5 py-4 lg:px-10 lg:py-10 lg:transition-transform lg:duration-300 lg:transform lg:hover:scale-110">
@@ -28,11 +30,7 @@ export const Products = () => {
         </div>
 
         <div className="relative overflow-hidden">
-          <img
-            src="./src/assets/section2.png"
-            alt="Teaware"
-            className="w-full h-auto"
-          />
+          <img src={section2} alt="Teaware" className="w-full h-auto" />
           <div className="absolute inset-0 flex items-center justify-center lg:opacity-0 lg:hover:opacity-100 lg:bg-[#c0d1bd] lg:bg-opacity-50 lg:transition-opacity">
             <NavLink to="/products/teaware">
               <button className="bg-[#41523fc0] px-5 py-4 lg:px-10 lg:py-10 lg:transition-transform lg:duration-300 lg:transform lg:hover:scale-110">
@@ -46,11 +44,7 @@ export const Products = () => {
         </div>
 
         <div className="relative overflow-hidden">
-          <img
-            src="./src/assets/section3.png"
-            alt="Gift Voucher"
-            className="w-full h-auto"
-          />
+          <img src={section3} alt="Gift Voucher" className="w-full h-auto" />
           <div className="absolute inset-0 flex items-center justify-center lg:opacity-0 lg:hover:opacity-100 lg:bg-[#c0d1bd] lg:bg-opacity-50 lg:transition-opacity">
             <NavLink to="/products/voucher">
               <button className="bg-[#41523fc0] px-5 py-4 lg:px-10 lg:py-10 lg:transition-transform lg:duration-300 lg:transform lg:hover:scale-110">

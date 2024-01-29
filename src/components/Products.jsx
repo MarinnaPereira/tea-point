@@ -1,4 +1,5 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import sectionone from "../assets/sectionone.png";
 
 export const Products = () => {
   return (
@@ -13,11 +14,7 @@ export const Products = () => {
 
       <div className="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5 lg:px-32 md:px-24 px-12">
         <div className="relative overflow-hidden">
-          <img
-            src="./src/assets/sectionone.png"
-            alt="Tea Leaves"
-            className="w-full h-auto"
-          />
+          <img src={sectionone} alt="Tea Leaves" className="w-full h-auto" />
           <div className="absolute inset-0 flex items-center justify-center lg:opacity-0 lg:hover:opacity-100 lg:bg-[#c0d1bd] lg:bg-opacity-50 lg:transition-opacity">
             <NavLink to="/products/tea-leaves">
               <button className="bg-[#41523fc0] px-5 py-4 lg:px-10 lg:py-10 lg:transition-transform lg:duration-300 lg:transform lg:hover:scale-110">

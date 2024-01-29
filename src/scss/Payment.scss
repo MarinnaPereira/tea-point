@@ -3,7 +3,7 @@
 
   .billing-address-form,
   .delivery-address-form {
-    @media screen and (max-width: 567px) {
+    @media screen and (max-width: 560px) {
       width: 300px;
     }
     h1 {
@@ -18,14 +18,16 @@
 }
 
 .method-container {
-  @media screen and (max-width: 567px) {
-    width: 300px;
-  }
   h1 {
     background-color: #94ad90;
     color: #fefefe;
   }
-  .payment-form {
+  .payment-form,
+  .payment-form-container,
+  .billing-summary {
+    @media screen and (max-width: 560px) {
+      width: 300px;
+    }
     .paypal-button {
       background-color: #019cde;
       color: #fefefe;

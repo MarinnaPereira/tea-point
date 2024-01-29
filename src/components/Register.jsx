@@ -125,7 +125,9 @@ export const Register = () => {
             </NavLink>
           </div>
           {successfullyRegistered && (
-            <p className="success-msg">Successfully registered!</p>
+            <p className="success-msg text-center md:text-left">
+              Successfully registered!
+            </p>
           )}
         </form>
       </div>

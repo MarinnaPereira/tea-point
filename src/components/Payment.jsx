@@ -27,7 +27,7 @@ export const Payment = () => {
   return (
     <section id="payment-section" className="flex justify-center px-12">
       <div className="payment-container justify-center">
-        <div className="flex flex-col lg:flex-row justify-center items-center lg:items-start gap-16 mt-14">
+        <div className="flex flex-col lg:flex-row justify-center items-center xl:items-start gap-16 mt-14">
           <div>
             <form className="billing-address-form flex flex-col gap-2 w-96">
               <h1 className="text-xl px-2 py-2 mb-4 ">Billing Address</h1>
@@ -292,7 +292,7 @@ export const Payment = () => {
           </label>
         </div>
 
-        <div className="method-container flex flex-col-reverse lg:flex-row justify-center items-center lg:items-start gap-16 mt-8 mb-12">
+        <div className="method-container flex flex-col-reverse lg:flex-row justify-center items-center xl:items-start gap-16 mt-8 mb-12">
           <div className="payment-form-container flex flex-col gap-2 w-96">
             <form className="payment-form flex flex-col gap-2 w-96">
               <h1 className="text-xl px-2 py-2 mb-4 ">Payment</h1>
@@ -400,7 +400,7 @@ export const Payment = () => {
                   <p className=" my-4 text-xl">Log In To PayPal</p>
                   <label htmlFor="paypal-email">
                     <input
-                      className="rounded-md mb-2 py-2 leading-tight border border-gray-400 focus:outline-none"
+                      className="w-full rounded-md mb-2 py-2 leading-tight border border-gray-400 focus:outline-none"
                       type="email"
                       id="paypal-email"
                       placeholder="  Email address"
@@ -408,7 +408,7 @@ export const Payment = () => {
                   </label>
                   <label htmlFor="paypal-password">
                     <input
-                      className="rounded-md mb-2 py-2 leading-tight border border-gray-400 focus:outline-none"
+                      className="w-full rounded-md mb-2 py-2 leading-tight border border-gray-400 focus:outline-none"
                       type="password"
                       id="paypal-password"
                       placeholder="  Password"

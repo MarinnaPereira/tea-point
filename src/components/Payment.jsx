@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { useCartContext } from "../hooks/useCartContext";
 import cardPayment from "../assets/cardPayment.png";
 import paypalImg from "../assets/paypal.png";
-// import { FaPaypal } from "react-icons/fa";
+import { FaShoppingCart } from "react-icons/fa";
 import "../scss/Payment.scss";
 
 export const Payment = () => {
@@ -382,19 +382,18 @@ export const Payment = () => {
                   />
                   PayPal
                 </label>
-                {/* <FaPaypal className="text-2xl text-blue-600" /> */}
               </div>
 
               {paymentMethod === "paypal" && (
-                <div className="flex flex-col items-center w-11/12 m-auto mb-4 border-2 px-4 text-gray-600">
-                  <div>
-                    <img
-                      src={paypalImg}
-                      className="w-24 mx-auto"
-                      alt="paypal-logo"
-                    />
+                <div className="flex flex-col w-11/12 m-auto mb-4 border-2 px-4 text-gray-600">
+                  <div className="flex items-center justify-between w-full">
+                    <img src={paypalImg} className="w-28 " alt="paypal-logo" />{" "}
+                    <div className="flex gap-2 items-center ">
+                      <FaShoppingCart className="text-gray-500" />
+                      <p className="text-gray-500"> 0.00</p>
+                    </div>
                   </div>
-                  <p className="ml-2 my-4 text-xl">Log In To PayPal</p>
+                  <p className=" my-4 text-xl">Log In To PayPal</p>
                   <label htmlFor="paypal-email">
                     <input
                       className="rounded-md mb-2 py-2 leading-tight border border-gray-400 focus:outline-none"
@@ -411,8 +410,15 @@ export const Payment = () => {
                       placeholder="  Password"
                     />
                   </label>
-                  <button className="paypal-button w-full rounded-md p-1.5 font-semibold mb-4">
+                  <button className="paypal-button w-full rounded-md p-1.5 font-semibold mt-2">
                     Log In
+                  </button>
+                  <p className="border-b-2 w-full pb-2 mt-4 text-center text-blue-400">
+                    Having trouble logging in?
+                  </p>
+
+                  <button className="bg-gray-200 w-full rounded-md p-1.5 font-semibold my-6">
+                    Check Out as a Guest
                   </button>
                 </div>
               )}
@@ -421,7 +427,7 @@ export const Payment = () => {
                 {" "}
                 <button
                   onClick={handlePayment}
-                  className="payment-button w-56 rounded-xl px-6 py-2 text-slate-100 transition-all ease-in-out duration-300"
+                  className="payment-button w-56 rounded-xl mt-2 px-6 py-2 text-slate-100 transition-all ease-in-out duration-300"
                 >
                   Pay and place order
                 </button>

@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useCartContext } from "../hooks/useCartContext";
 import { useUsersContext } from "../hooks/useUsersContext";
@@ -35,10 +34,6 @@ export const Cart = () => {
       navigate("/login");
     }
   };
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   return (
     <div id="cart-container" className="flex justify-center">

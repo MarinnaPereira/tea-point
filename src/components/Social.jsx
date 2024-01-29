@@ -17,7 +17,9 @@ export const Social = () => {
     <section className="social p-8">
       <div className="flex justify-center gap-6 text-2xl mb-7">
         <a
-          href="#"
+          href="https://www.instagram.com/"
+          target="_blank"
+          rel="noreferrer"
           onClick={(e) => {
             e.preventDefault();
           }}
@@ -26,7 +28,9 @@ export const Social = () => {
           <FaInstagram />
         </a>
         <a
-          href="#"
+          href="https://www.facebook.com/"
+          target="_blank"
+          rel="noreferrer"
           onClick={(e) => {
             e.preventDefault();
           }}
@@ -35,7 +39,9 @@ export const Social = () => {
           <FaFacebook />
         </a>
         <a
-          href="#"
+          href="https://www.tiktok.com/en/"
+          target="_blank"
+          rel="noreferrer"
           onClick={(e) => {
             e.preventDefault();
           }}

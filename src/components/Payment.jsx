@@ -1,16 +1,16 @@
-import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
-import { useCartContext } from "../hooks/useCartContext";
+import {useEffect, useState} from "react";
+import {NavLink} from "react-router-dom";
+import {useCartContext} from "../hooks/useCartContext";
 import cardPayment from "../assets/cardPayment.png";
 import paypalImg from "../assets/paypal.png";
-import { FaShoppingCart } from "react-icons/fa";
+import {FaShoppingCart} from "react-icons/fa";
 import "../scss/Payment.scss";
 
 export const Payment = () => {
   const [addressState, setAddressState] = useState(false);
   const [paymentMethod, setPaymentMethod] = useState("");
 
-  const { sumOfPrices, shippingCosts, total, setHasCheckedOut, emptyCart } =
+  const {sumOfPrices, shippingCosts, total, setHasCheckedOut, emptyCart} =
     useCartContext();
 
   const isShippingFree = sumOfPrices > 100;
@@ -77,18 +77,19 @@ export const Payment = () => {
                 id="county"
                 className="mx-4 mb-4 h-8 px-3 shadow leading-tight focus:outline-none focus:shadow-outline"
               >
-                <option value="DE"> Germany</option>
-                <option value="JP">Japan</option>
+                <option value="DE">Germany</option>
                 <option value="IN">India</option>
-                <option value="PT"> Portugal</option>
-                <option value="PT"> Greece</option>
+                <option value="JP">Japan</option>
+                <option value="PT">Portugal</option>
                 <option value="EN">England</option>
-                <option value="IR">Persia</option>
-                <option value="AF">Afghanistan</option>
+                <option value="GR">Greece</option>
+                <option value="ID">Indonesia</option>
+                <option value="IR">Iran</option>
+                <option value="IQ">Iraq</option>
                 <option value="PK">Pakistan</option>
-                <option value="UA">Ukraine</option>
                 <option value="PH">Philippines</option>
-                <option value="TR">Turkey</option>
+                <option value="SY">Syria</option>
+                <option value="UA">Ukraine</option>
               </select>
 
               <label
@@ -203,18 +204,19 @@ export const Payment = () => {
                     id="county"
                     className="mx-4 mb-4 h-8 px-3 shadow leading-tight focus:outline-none focus:shadow-outline"
                   >
-                    <option value="DE"> Germany</option>
-                    <option value="JP">Japan</option>
+                    <option value="DE">Germany</option>
                     <option value="IN">India</option>
-                    <option value="PT"> Portugal</option>
-                    <option value="PT"> Greece</option>
+                    <option value="JP">Japan</option>
+                    <option value="PT">Portugal</option>
                     <option value="EN">England</option>
-                    <option value="IR">Persia</option>
-                    <option value="AF">Afghanistan</option>
+                    <option value="GR">Greece</option>
+                    <option value="ID">Indonesia</option>
+                    <option value="IR">Iran</option>
+                    <option value="IQ">Iraq</option>
                     <option value="PK">Pakistan</option>
-                    <option value="UA">Ukraine</option>
                     <option value="PH">Philippines</option>
-                    <option value="TR">Turkey</option>
+                    <option value="SY">Syria</option>
+                    <option value="UA">Ukraine</option>
                   </select>
 
                   <label

@@ -31,11 +31,11 @@ export const TeaLeaves = () => {
               <img
                 src={product.productImage}
                 alt={product.productName}
-                className="w-full h-auto transition-transform duration-300 transform group-hover:scale-105"
+                className="w-full h-auto transition-transform duration-300 transform lg:group-hover:scale-105"
               />
-              <div className="absolute inset-x-0 bottom-28 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+              <div className="absolute inset-x-0 bottom-28 flex items-center justify-center lg:opacity-0 lg:group-hover:opacity-100 transition-opacity">
                 <button
-                  className="bg-[#c0d1bd] w-full px-10 py-6 opacity-90"
+                  className="bg-[#c0d1bd] w-full m-2 lg:m-0 px-10 py-6 opacity-90"
                   onClick={() => {
                     handleAddToCart(product);
                   }}

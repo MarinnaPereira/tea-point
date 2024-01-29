@@ -18,7 +18,7 @@ export const Products = () => {
             alt="Tea Leaves"
             className="w-full h-auto"
           />
-          <div className="absolute inset-0 flex items-center justify-center lg:opacity-0 lg:hover:opacity-100 lg:bg-[#c0d1bd] bg-opacity-50 transition-opacity">
+          <div className="absolute inset-0 flex items-center justify-center lg:opacity-0 lg:hover:opacity-100 lg:bg-[#c0d1bd] lg:bg-opacity-50 lg:transition-opacity">
             <NavLink to="/products/tea-leaves">
               <button className="bg-[#41523fc0] px-5 py-4 lg:px-10 lg:py-10 lg:transition-transform lg:duration-300 lg:transform lg:hover:scale-110">
                 <p className="text-white text-[23px]">See more</p>
@@ -36,7 +36,7 @@ export const Products = () => {
             alt="Teaware"
             className="w-full h-auto"
           />
-          <div className="absolute inset-0 flex items-center justify-center lg:opacity-0 lg:hover:opacity-100 lg:bg-[#c0d1bd] bg-opacity-50 transition-opacity">
+          <div className="absolute inset-0 flex items-center justify-center lg:opacity-0 lg:hover:opacity-100 lg:bg-[#c0d1bd] lg:bg-opacity-50 lg:transition-opacity">
             <NavLink to="/products/teaware">
               <button className="bg-[#41523fc0] px-5 py-4 lg:px-10 lg:py-10 lg:transition-transform lg:duration-300 lg:transform lg:hover:scale-110">
                 <p className="text-white text-[23px]">See more</p>
@@ -54,7 +54,7 @@ export const Products = () => {
             alt="Gift Voucher"
             className="w-full h-auto"
           />
-          <div className="absolute inset-0 flex items-center justify-center lg:opacity-0 lg:hover:opacity-100 lg:bg-[#c0d1bd] bg-opacity-50 transition-opacity">
+          <div className="absolute inset-0 flex items-center justify-center lg:opacity-0 lg:hover:opacity-100 lg:bg-[#c0d1bd] lg:bg-opacity-50 lg:transition-opacity">
             <NavLink to="/products/voucher">
               <button className="bg-[#41523fc0] px-5 py-4 lg:px-10 lg:py-10 lg:transition-transform lg:duration-300 lg:transform lg:hover:scale-110">
                 <p className="text-white text-[23px]">See more</p>

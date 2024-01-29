@@ -1,4 +1,4 @@
-import { NavLink, Outlet } from "react-router-dom";
+import {NavLink, Outlet} from "react-router-dom";
 
 export const Products = () => {
   return (
@@ -16,11 +16,11 @@ export const Products = () => {
           <img
             src="./src/assets/section1.png"
             alt="Tea Leaves"
-            className="w-full h-auto transition-transform duration-500 transform hover:scale-110"
+            className="w-full h-auto"
           />
-          <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 bg-[#c0d1bd] bg-opacity-50 transition-opacity">
+          <div className="absolute inset-0 flex items-center justify-center lg:opacity-0 lg:hover:opacity-100 lg:bg-[#c0d1bd] bg-opacity-50 transition-opacity">
             <NavLink to="/products/tea-leaves">
-              <button className="bg-[#41523fc0] px-10 py-10 transition-transform duration-300 transform hover:scale-110">
+              <button className="bg-[#41523fc0] px-5 py-4 lg:px-10 lg:py-10 lg:transition-transform lg:duration-300 lg:transform lg:hover:scale-110">
                 <p className="text-white text-[23px]">See more</p>
               </button>
             </NavLink>
@@ -34,11 +34,11 @@ export const Products = () => {
           <img
             src="./src/assets/section2.png"
             alt="Teaware"
-            className="w-full h-auto transition-transform duration-500 transform hover:scale-110"
+            className="w-full h-auto"
           />
-          <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 bg-[#c0d1bd] bg-opacity-50 transition-opacity">
+          <div className="absolute inset-0 flex items-center justify-center lg:opacity-0 lg:hover:opacity-100 lg:bg-[#c0d1bd] bg-opacity-50 transition-opacity">
             <NavLink to="/products/teaware">
-              <button className="bg-[#41523fc0] px-10 py-10 transition-transform duration-300 transform hover:scale-110">
+              <button className="bg-[#41523fc0] px-5 py-4 lg:px-10 lg:py-10 lg:transition-transform lg:duration-300 lg:transform lg:hover:scale-110">
                 <p className="text-white text-[23px]">See more</p>
               </button>
             </NavLink>
@@ -52,11 +52,11 @@ export const Products = () => {
           <img
             src="./src/assets/section3.png"
             alt="Gift Voucher"
-            className="w-full h-auto transition-transform duration-500 transform hover:scale-110"
+            className="w-full h-auto"
           />
-          <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 bg-[#c0d1bd] bg-opacity-50 transition-opacity">
+          <div className="absolute inset-0 flex items-center justify-center lg:opacity-0 lg:hover:opacity-100 lg:bg-[#c0d1bd] bg-opacity-50 transition-opacity">
             <NavLink to="/products/voucher">
-              <button className="bg-[#41523fc0] px-10 py-10 transition-transform duration-300 transform hover:scale-110">
+              <button className="bg-[#41523fc0] px-5 py-4 lg:px-10 lg:py-10 lg:transition-transform lg:duration-300 lg:transform lg:hover:scale-110">
                 <p className="text-white text-[23px]">See more</p>
               </button>
             </NavLink>

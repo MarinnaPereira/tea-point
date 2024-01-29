@@ -1,6 +1,6 @@
 import { FaArrowRight } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
-import goHomeImg from "../assets/opt4.jpg";
+import goHomeImg from "../assets/goHome.jpg";
 import goStoreImg from "../assets/goStore.jpg";
 import "../scss/NotFound.scss";
 

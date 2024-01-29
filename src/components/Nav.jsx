@@ -24,7 +24,7 @@ export const Nav = () => {
   };
 
   return (
-    <nav className="p-4 text-3xl">
+    <nav className="p-4 text-2xl lg:text-3xl">
       <div className="container mx-auto grid grid-cols-3 items-center gap-4">
         <div className="text-center col-start-2">
           <NavLink to={"/"} exact="true">
@@ -51,7 +51,7 @@ export const Nav = () => {
         <div
           className={`icons-div row-start-2 col-start-2 lg:row-start-1 lg:col-start-3 flex justify-center gap-5 md:gap-10 text-xl md:text-2xl ${
             !showIcons && "hidden lg:flex"
-          }`}
+          } ${amountOfProducts > 0 ? "pl-8" : ""}`}
         >
           <NavLink
             to="/products"

@@ -1,9 +1,14 @@
 #logout-container {
   #logout {
-    width: 380px;
-
-    @media screen and (max-width: 567px) {
-      width: 310px;
+    width: 410px;
+    background-color: #ffffff;
+    box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.122);
+    border-radius: 8px;
+    @media screen and (max-width: 767px) {
+      width: 480px;
+      box-shadow: none;
+      border-radius: 0;
+      background-color: inherit;
     }
 
     .form-heading {

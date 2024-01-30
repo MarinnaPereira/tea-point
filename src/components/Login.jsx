@@ -57,7 +57,7 @@ export const Login = () => {
     <div id="form-container" className="flex justify-center">
       <div
         id="form-div"
-        className="px-5 md:px-8 pt-3 md:pt-6 pb-3 md:pb-8 mt-6 mb-12"
+        className="px-5 md:px-8 pt-3 md:pt-6 pb-6 md:pb-8 mt-6 mb-12"
       >
         <h1 className="form-heading text-2xl my-3 px-7 md:px-8 py-1">Login</h1>
         <p className="text-form px-7 md:px-8 py-3">
@@ -89,7 +89,7 @@ export const Login = () => {
               {showPassword ? <FaEye /> : <FaEyeSlash />}
             </span>
           </div>
-          <div className="flex flex-col md:flex-row justify-between items-center pt-5 md:py-5">
+          <div className="flex flex-col md:flex-row justify-between items-center pt-5 md:pt-5">
             <button
               type="submit"
               className="rounded-xl px-6 py-2 text-slate-100 transition-all ease-in-out duration-300 mb-5"

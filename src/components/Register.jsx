@@ -71,7 +71,7 @@ export const Register = () => {
     <div id="form-container" className="flex justify-center">
       <div
         id="form-div"
-        className="px-5 md:px-8 pt-3 md:pt-6 pb-3 md:pb-8 mt-6 mb-12"
+        className="px-5 md:px-8 pt-3 md:pt-6 pb-1 md:pb-8 mt-6 mb-12"
       >
         <h1 className="form-heading text-2xl my-3 px-7 md:px-8 py-1">
           Register
@@ -121,7 +121,7 @@ export const Register = () => {
             <input type="checkbox" name="signUp" id="signUp" /> I want to sign
             up to receive exclusive promotions and benefits from Tea Point!
           </label>
-          <div className="flex flex-col md:flex-row justify-between items-center pt-6 md:py-5">
+          <div className="flex flex-col md:flex-row justify-between items-center pt-6 py-6 md:py-5">
             <button className="rounded-xl px-6 py-2 text-slate-100 transition-all ease-in-out duration-300 mb-5 md:mb-0">
               Create account
             </button>

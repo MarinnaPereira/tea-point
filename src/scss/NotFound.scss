@@ -1,6 +1,6 @@
 .not-found-container {
   width: 800px;
-  @media screen and (max-width: 567px) {
+  @media screen and (max-width: 797px) {
     max-width: 350px;
   }
   div {
@@ -9,9 +9,9 @@
     }
     div {
       img {
-        width: 360px;
+        width: 340px;
         object-fit: cover;
-        @media screen and (max-width: 567px) {
+        @media screen and (max-width: 797px) {
           max-width: 350px;
         }
       }

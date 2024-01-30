@@ -19,6 +19,9 @@
     }
     .img {
       border: 7px solid #c0d1bd;
+      @media screen and (max-width: 767px) {
+        borders: 4px;
+      }
     }
   }
 }

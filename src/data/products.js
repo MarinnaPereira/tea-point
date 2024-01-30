@@ -224,7 +224,7 @@ export const products = [
     description: "Fascinating journey",
   },
   {
-    id: "vo-6",
+    id: "ts-6",
     type: "teaware",
     productName: "Tea Set - Oasis",
     price: 230.9,

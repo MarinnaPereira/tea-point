@@ -1,15 +1,15 @@
 .not-found-container {
-  width: 800px;
-  @media screen and (max-width: 797px) {
-    max-width: 350px;
-  }
   div {
+    width: 700px;
+    @media screen and (max-width: 797px) {
+      max-width: 330px;
+    }
     h1 {
       letter-spacing: 0.03rem;
     }
     div {
       img {
-        width: 340px;
+        width: 300px;
         object-fit: cover;
         @media screen and (max-width: 797px) {
           max-width: 330px;

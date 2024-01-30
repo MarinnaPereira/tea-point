@@ -8,7 +8,7 @@ export const NotFound = () => {
   return (
     <div className="not-found-container flex items-center justify-center pb-10">
       <div className="pt-10 md:pt-20 flex flex-col items-center justify-center">
-        <h1 className="text-xl font-bold mb-8">
+        <h1 className="text-xl font-semibold md:font-bold mb-8">
           {`Sorry! It seems that the page you're looking for cannot be found.`}
         </h1>
         <p className="text-lg mb-8">

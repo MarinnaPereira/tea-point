@@ -11,6 +11,9 @@
       img {
         width: 360px;
         object-fit: cover;
+        @media screen and (max-width: 567px) {
+          max-width: 350px;
+        }
       }
       h2 {
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);

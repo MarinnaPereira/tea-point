@@ -6,8 +6,8 @@ import "../scss/NotFound.scss";
 
 export const NotFound = () => {
   return (
-    <div className="not-found-container m-auto flex flex-col pb-10">
-      <div className="pt-20 flex flex-col">
+    <div className="not-found-container m-auto flex flex-col   pb-10">
+      <div className="pt-20 flex flex-col   m-auto">
         <h1 className="text-xl font-bold mb-8">
           {`Sorry! It seems that the page you're looking for cannot be found.`}
         </h1>

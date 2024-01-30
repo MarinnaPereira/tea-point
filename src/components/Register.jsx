@@ -115,13 +115,13 @@ export const Register = () => {
             placeholder="Confirm password*"
             ref={confirmPasswordInput}
             required
-            className="input-div shadow border w-full my-3 py-2 px-4 md:px-3 leading-tight focus:outline-none focus:shadow-outline"
+            className="input-div shadow border w-full mt-3 mb-6 py-2 px-4 md:px-3  leading-tight focus:outline-none focus:shadow-outline"
           />
-          <label className="pt-2">
+          <label>
             <input type="checkbox" name="signUp" id="signUp" /> I want to sign
             up to receive exclusive promotions and benefits from Tea Point!
           </label>
-          <div className="flex flex-col md:flex-row justify-between items-center pt-6 py-6 md:py-5">
+          <div className="flex flex-col md:flex-row justify-between items-center py-6">
             <button className="rounded-xl px-6 py-2 text-slate-100 transition-all ease-in-out duration-300 mb-5 md:mb-0">
               Create account
             </button>

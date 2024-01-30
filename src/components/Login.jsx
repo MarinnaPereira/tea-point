@@ -55,12 +55,15 @@ export const Login = () => {
 
   return (
     <div id="form-container" className="flex justify-center">
-      <div id="form-div" className="px-8 pt-6 pb-8 mt-6 mb-12">
-        <h1 className="form-heading text-2xl my-3 px-8 py-1">Login</h1>
-        <p className="text-form px-8 py-3">
+      <div
+        id="form-div"
+        className="px-5 md:px-8 pt-3 md:pt-6 pb-3 md:pb-8 mt-6 mb-12"
+      >
+        <h1 className="form-heading text-2xl my-3 px-7 md:px-8 py-1">Login</h1>
+        <p className="text-form px-7 md:px-8 py-3">
           Great that you are back! Please log in with your email and password.
         </p>
-        <form onSubmit={submitHandler} className="px-8">
+        <form onSubmit={submitHandler} className="px-7 md:px-8">
           {error && <p className="error-msg text-red-600">{error}</p>}
           <div className="input-div flex align-middle shadow border w-full my-4">
             <input
@@ -68,7 +71,7 @@ export const Login = () => {
               ref={emailInput}
               placeholder="youremail@email.com*"
               required
-              className="w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+              className="w-full py-2 px-4 md:px-3 leading-tight focus:outline-none focus:shadow-outline"
             />
           </div>
           <div className="input-div flex items-center shadow border w-full mt-6 mb-4 ">
@@ -77,7 +80,7 @@ export const Login = () => {
               placeholder="Password*"
               ref={passwordInput}
               required
-              className="w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+              className="w-full py-2 px-4 md:px-3 leading-tight focus:outline-none focus:shadow-outline"
             />
             <span
               onClick={clickHandler}
@@ -86,7 +89,7 @@ export const Login = () => {
               {showPassword ? <FaEye /> : <FaEyeSlash />}
             </span>
           </div>
-          <div className="flex flex-col md:flex-row justify-between items-center py-5">
+          <div className="flex flex-col md:flex-row justify-between items-center pt-5 md:py-5">
             <button
               type="submit"
               className="rounded-xl px-6 py-2 text-slate-100 transition-all ease-in-out duration-300 mb-5"

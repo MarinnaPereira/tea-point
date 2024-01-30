@@ -38,7 +38,7 @@ export const Cart = () => {
   return (
     <div id="cart-container" className="flex justify-center">
       {cart.length === 0 ? (
-        <div id="empty-cart" className="pt-52 pb-40 text-center">
+        <div id="empty-cart" className="pt-40 md:pt-52 pb-40 text-center">
           <p className="pb-6 text-xl">Your basket is empty.</p>
           <NavLink to="/products">
             <button className="rounded-xl text-xl px-6 py-2 text-slate-100 transition-all ease-in-out duration-300">
@@ -47,7 +47,10 @@ export const Cart = () => {
           </NavLink>
         </div>
       ) : (
-        <div id="product-cart" className="px-8 pt-6 pb-8 mt-6 mb-12">
+        <div
+          id="product-cart"
+          className="px-5 md:px-8 pt-3 md:pt-6 pb-3 md:pb-8 mt-6 mb-12"
+        >
           <div className="cart-header flex justify-between my-3 rounded-r-2xl">
             <h1 className="text-2xl pl-6 md:pl-8 py-1">Your Cart</h1>
             <span className="rounded-xl inline-flex items-center px-3 text-slate-100">
@@ -68,7 +71,7 @@ export const Cart = () => {
                       alt="product"
                       className="hidden md:block"
                     />
-                    <div className="flex-col space-y-4 mx-6 pt-3">
+                    <div className="flex-col space-y-4 mx-6 md:pt-3">
                       <h3 className="font-bold">{product.productName}</h3>
                       <p>€{product.price}</p>
                       <div className="amount-info flex-col">
@@ -91,7 +94,7 @@ export const Cart = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="delete-product w-4 pt-4 cursor-pointer text-xl">
+                  <div className="delete-product w-4 pt-1 md:pt-4 cursor-pointer text-xl">
                     <FaRegTrashAlt
                       onClick={() => deleteProduct(product.id)}
                       className="delete-icon transition-all ease-in-out duration-300"

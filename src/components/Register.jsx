@@ -69,54 +69,59 @@ export const Register = () => {
 
   return (
     <div id="form-container" className="flex justify-center">
-      <div id="form-div" className="px-8 pt-6 pb-8 mt-6 mb-12">
-        <h1 className="form-heading text-2xl my-3 px-8 py-1">Register</h1>
-        <p className="text-form px-8 py-3">
+      <div
+        id="form-div"
+        className="px-5 md:px-8 pt-3 md:pt-6 pb-3 md:pb-8 mt-6 mb-12"
+      >
+        <h1 className="form-heading text-2xl my-3 px-7 md:px-8 py-1">
+          Register
+        </h1>
+        <p className="text-form px-7 md:px-8 py-3">
           For an even better experience, create your account and enjoy our
           benefits.
         </p>
-        <form onSubmit={submitHandler} className="px-8">
+        <form onSubmit={submitHandler} className="px-7 md:px-8">
           {error && <p className="error-msg text-red-600">{error}</p>}
           <input
             type="text"
             placeholder="First Name*"
             ref={firstNameInput}
             required
-            className="input-div shadow border w-full my-3 py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+            className="input-div shadow border w-full my-3 py-2 px-4 md:px-3 leading-tight focus:outline-none focus:shadow-outline"
           />
           <input
             type="text"
             placeholder="Last Name*"
             ref={lastNameInput}
             required
-            className="input-div shadow border w-full my-3 py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+            className="input-div shadow border w-full my-3 py-2 px-4 md:px-3 leading-tight focus:outline-none focus:shadow-outline"
           />
           <input
             type="email"
             ref={emailInput}
             placeholder="youremail@email.com*"
             required
-            className="input-div shadow border w-full my-3 py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+            className="input-div shadow border w-full my-3 py-2 px-4 md:px-3 leading-tight focus:outline-none focus:shadow-outline"
           />
           <input
             type="password"
             placeholder="Password*"
             ref={passwordInput}
             required
-            className="input-div shadow border w-full my-3 py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+            className="input-div shadow border w-full my-3 py-2 px-4 md:px-3 leading-tight focus:outline-none focus:shadow-outline"
           />
           <input
             type="password"
             placeholder="Confirm password*"
             ref={confirmPasswordInput}
             required
-            className="input-div shadow border w-full my-3 py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+            className="input-div shadow border w-full my-3 py-2 px-4 md:px-3 leading-tight focus:outline-none focus:shadow-outline"
           />
-          <label>
+          <label className="pt-2">
             <input type="checkbox" name="signUp" id="signUp" /> I want to sign
             up to receive exclusive promotions and benefits from Tea Point!
           </label>
-          <div className="flex flex-col md:flex-row justify-between items-center py-5">
+          <div className="flex flex-col md:flex-row justify-between items-center pt-6 md:py-5">
             <button className="rounded-xl px-6 py-2 text-slate-100 transition-all ease-in-out duration-300 mb-5 md:mb-0">
               Create account
             </button>

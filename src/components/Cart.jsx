@@ -49,7 +49,7 @@ export const Cart = () => {
       ) : (
         <div id="product-cart" className="px-8 pt-6 pb-8 mt-6 mb-12">
           <div className="cart-header flex justify-between my-3 rounded-r-2xl">
-            <h1 className="text-2xl pl-8 py-1">Your Cart</h1>
+            <h1 className="text-2xl pl-6 md:pl-8 py-1">Your Cart</h1>
             <span className="rounded-xl inline-flex items-center px-3 text-slate-100">
               {amountOfProducts}
               {amountOfProducts === 1 ? " product" : " products"}
@@ -101,15 +101,15 @@ export const Cart = () => {
               ))}
             </div>
             <div className="total">
-              <div className="m-8 flex justify-between">
+              <div className="ml-6 md:ml-8 m-8 flex justify-between">
                 <p>Subtotal</p>
                 <p>€{sumOfPrices}</p>
               </div>
-              <div className="m-8 flex justify-between">
+              <div className="ml-6 md:ml-8 m-8 flex justify-between">
                 <p>{isShippingFree ? "Free shipping" : "Shipping costs"}</p>
                 <p>€{isShippingFree ? "0" : shippingCosts}</p>
               </div>
-              <div className="m-8 flex justify-between">
+              <div className="ml-6 md:ml-8 m-8 flex justify-between">
                 <h3 className="font-semibold">Total</h3>
                 <p className="font-semibold">
                   €{isShippingFree ? sumOfPrices : total}

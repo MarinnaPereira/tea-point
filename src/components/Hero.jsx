@@ -1,4 +1,6 @@
+import { NavLink } from "react-router-dom";
 import "../scss/Hero.scss";
+
 export const Hero = () => {
   return (
     <div className="hero">
@@ -6,9 +8,9 @@ export const Hero = () => {
         <p className="text text-4xl md:text-5xl text-white font-cinzel">
           Find your perfect tea
         </p>
-        <a href="/products" className="link text-[23px] text-white ml-1">
+        <NavLink to="/products" className="link text-[23px] text-white ml-1">
           Explore a Symphony of Tea Flavors
-        </a>
+        </NavLink>
       </div>
     </div>
   );
